@@ -1,0 +1,640 @@
+2023-06-07 11:23:15.817 +02:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-06-07 11:23:16.041 +02:00 [DBG] Hosting starting
+2023-06-07 11:23:16.128 +02:00 [INF] User profile is available. Using 'C:\Users\adelb\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-06-07 11:23:16.141 +02:00 [DBG] Reading data from file 'C:\Users\adelb\AppData\Local\ASP.NET\DataProtection-Keys\key-d3fa0c5a-d3dc-4063-b5d3-799eb6550b00.xml'.
+2023-06-07 11:23:16.219 +02:00 [DBG] Found key {d3fa0c5a-d3dc-4063-b5d3-799eb6550b00}.
+2023-06-07 11:23:16.256 +02:00 [DBG] Considering key {d3fa0c5a-d3dc-4063-b5d3-799eb6550b00} with expiration date 2023-07-24 06:15:13Z as default key.
+2023-06-07 11:23:16.264 +02:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2023-06-07 11:23:16.273 +02:00 [DBG] Decrypting secret element using Windows DPAPI.
+2023-06-07 11:23:16.279 +02:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2023-06-07 11:23:16.290 +02:00 [DBG] Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+2023-06-07 11:23:16.301 +02:00 [DBG] Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+2023-06-07 11:23:16.313 +02:00 [DBG] Using key {d3fa0c5a-d3dc-4063-b5d3-799eb6550b00} as the default key.
+2023-06-07 11:23:16.320 +02:00 [DBG] Key ring with default key {d3fa0c5a-d3dc-4063-b5d3-799eb6550b00} was loaded during application startup.
+2023-06-07 11:23:16.771 +02:00 [DBG] Using development certificate: CN=localhost (Thumbprint: 8A107DDBEDB654340A352AAD656B77900C33CBCF)
+2023-06-07 11:23:16.903 +02:00 [INF] Now listening on: https://localhost:7101
+2023-06-07 11:23:16.907 +02:00 [INF] Now listening on: http://localhost:5019
+2023-06-07 11:23:16.911 +02:00 [DBG] Loaded hosting startup assembly Job_Offre
+2023-06-07 11:23:16.915 +02:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2023-06-07 11:23:16.917 +02:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2023-06-07 11:23:16.925 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-06-07 11:23:16.928 +02:00 [INF] Hosting environment: Development
+2023-06-07 11:23:16.932 +02:00 [INF] Content root path: D:\ASP\Etudiant\Job_Offre\Job_Offre\
+2023-06-07 11:23:16.932 +02:00 [DBG] Connection id "0HMR7739PUN7Q" received FIN.
+2023-06-07 11:23:16.937 +02:00 [DBG] Hosting started
+2023-06-07 11:23:16.963 +02:00 [DBG] Connection id "0HMR7739PUN7Q" accepted.
+2023-06-07 11:23:16.971 +02:00 [DBG] Connection id "0HMR7739PUN7Q" started.
+2023-06-07 11:23:17.029 +02:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-06-07 11:23:17.174 +02:00 [DBG] Connection id "0HMR7739PUN7Q" stopped.
+2023-06-07 11:23:17.187 +02:00 [DBG] Connection id "0HMR7739PUN7Q" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-06-07 11:23:17.656 +02:00 [DBG] Connection id "0HMR7739PUN7R" accepted.
+2023-06-07 11:23:17.922 +02:00 [DBG] Connection id "0HMR7739PUN7R" started.
+2023-06-07 11:23:18.056 +02:00 [DBG] Connection id "0HMR7739PUN7R" received FIN.
+2023-06-07 11:23:18.058 +02:00 [DBG] Connection id "0HMR7739PUN7S" accepted.
+2023-06-07 11:23:18.072 +02:00 [DBG] Connection id "0HMR7739PUN7S" started.
+2023-06-07 11:23:18.081 +02:00 [DBG] Failed to authenticate HTTPS connection.
+System.Security.Authentication.AuthenticationException: Authentication failed, see inner exception.
+ ---> System.ComponentModel.Win32Exception (0x80090327): Une erreur inconnue s’est produite lors du traitement du certificat.
+   --- End of inner exception stack trace ---
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-06-07 11:23:18.102 +02:00 [DBG] Connection id "0HMR7739PUN7R" stopped.
+2023-06-07 11:23:18.117 +02:00 [DBG] Connection id "0HMR7739PUN7R" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-06-07 11:23:18.166 +02:00 [DBG] Connection 0HMR7739PUN7S established using the following protocol: "Tls12"
+2023-06-07 11:23:18.335 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7101/swagger - -
+2023-06-07 11:23:18.534 +02:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2023-06-07 11:23:18.856 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7101/swagger - - - 301 0 - 528.4519ms
+2023-06-07 11:23:18.871 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7101/swagger/index.html - -
+2023-06-07 11:23:19.108 +02:00 [DBG] Response markup is scheduled to include browser refresh script injection.
+2023-06-07 11:23:19.466 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7101/swagger/swagger-ui.css - -
+2023-06-07 11:23:19.472 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7101/swagger/swagger-ui-bundle.js - -
+2023-06-07 11:23:19.466 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7101/swagger/swagger-ui-standalone-preset.js - -
+2023-06-07 11:23:19.479 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7101/_vs/browserLink - -
+2023-06-07 11:23:19.466 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7101/_framework/aspnetcore-browser-refresh.js - -
+2023-06-07 11:23:19.497 +02:00 [DBG] Response markup was updated to include browser refresh script injection.
+2023-06-07 11:23:19.512 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7101/swagger/index.html - - - 200 - text/html;charset=utf-8 640.8975ms
+2023-06-07 11:23:19.553 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7101/_framework/aspnetcore-browser-refresh.js - - - 200 11988 application/javascript;+charset=utf-8 86.6136ms
+2023-06-07 11:23:19.559 +02:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2023-06-07 11:23:19.592 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7101/swagger/swagger-ui.css - - - 200 143632 text/css 126.6161ms
+2023-06-07 11:23:19.620 +02:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2023-06-07 11:23:19.629 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7101/swagger/swagger-ui-standalone-preset.js - - - 200 337162 application/javascript 162.5632ms
+2023-06-07 11:23:19.649 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7101/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 176.6752ms
+2023-06-07 11:23:19.670 +02:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2023-06-07 11:23:19.688 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7101/swagger/swagger-ui-bundle.js - - - 200 1092889 application/javascript 217.4471ms
+2023-06-07 11:23:20.041 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7101/swagger/v1/swagger.json - -
+2023-06-07 11:23:20.449 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7101/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 408.1953ms
+2023-06-07 11:32:41.421 +02:00 [DBG] Connection id "0HMR7739PUN7T" accepted.
+2023-06-07 11:32:41.428 +02:00 [DBG] Connection id "0HMR7739PUN7T" started.
+2023-06-07 11:32:41.466 +02:00 [DBG] Connection id "0HMR7739PUN7T" received FIN.
+2023-06-07 11:32:41.480 +02:00 [DBG] Connection id "0HMR7739PUN7U" accepted.
+2023-06-07 11:32:41.482 +02:00 [DBG] Failed to authenticate HTTPS connection.
+System.Security.Authentication.AuthenticationException: Authentication failed, see inner exception.
+ ---> System.ComponentModel.Win32Exception (0x80090327): Une erreur inconnue s’est produite lors du traitement du certificat.
+   --- End of inner exception stack trace ---
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-06-07 11:32:41.509 +02:00 [DBG] Connection id "0HMR7739PUN7U" started.
+2023-06-07 11:32:41.532 +02:00 [DBG] Connection id "0HMR7739PUN7T" stopped.
+2023-06-07 11:32:41.548 +02:00 [DBG] Connection id "0HMR7739PUN7T" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-06-07 11:32:41.562 +02:00 [DBG] Connection 0HMR7739PUN7U established using the following protocol: "Tls12"
+2023-06-07 11:32:41.583 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7101/api/authentiation/authenticate - -
+2023-06-07 11:32:41.608 +02:00 [DBG] The request has an origin header: 'http://localhost:4200'.
+2023-06-07 11:32:41.615 +02:00 [INF] CORS policy execution successful.
+2023-06-07 11:32:41.625 +02:00 [DBG] The request is a preflight request.
+2023-06-07 11:32:41.633 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7101/api/authentiation/authenticate - - - 204 - - 50.1445ms
+2023-06-07 11:32:41.651 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7101/api/authentiation/authenticate application/json 74
+2023-06-07 11:32:41.656 +02:00 [DBG] The request has an origin header: 'http://localhost:4200'.
+2023-06-07 11:32:41.663 +02:00 [INF] CORS policy execution successful.
+2023-06-07 11:32:41.670 +02:00 [DBG] POST requests are not supported
+2023-06-07 11:32:41.752 +02:00 [DBG] 1 candidate(s) found for the request path '/api/authentiation/authenticate'
+2023-06-07 11:32:41.785 +02:00 [DBG] Endpoint 'Job_Offre.Controllers.AuthenticationController.Authenticate (Job_Offre)' with route pattern 'api/authentiation/authenticate' is valid for the request path '/api/authentiation/authenticate'
+2023-06-07 11:32:41.796 +02:00 [DBG] Request matched endpoint 'Job_Offre.Controllers.AuthenticationController.Authenticate (Job_Offre)'
+2023-06-07 11:32:42.224 +02:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2023-06-07 11:32:42.231 +02:00 [INF] Executing endpoint 'Job_Offre.Controllers.AuthenticationController.Authenticate (Job_Offre)'
+2023-06-07 11:32:42.323 +02:00 [INF] Route matched with {action = "Authenticate", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.String]] Authenticate(AuthenticationRequestBody) on controller Job_Offre.Controllers.AuthenticationController (Job_Offre).
+2023-06-07 11:32:42.334 +02:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2023-06-07 11:32:42.340 +02:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2023-06-07 11:32:42.344 +02:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2023-06-07 11:32:42.349 +02:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2023-06-07 11:32:42.353 +02:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2023-06-07 11:32:42.358 +02:00 [DBG] Executing controller factory for controller Job_Offre.Controllers.AuthenticationController (Job_Offre)
+2023-06-07 11:32:43.297 +02:00 [DBG] Executed controller factory for controller Job_Offre.Controllers.AuthenticationController (Job_Offre)
+2023-06-07 11:32:43.315 +02:00 [DBG] Attempting to bind parameter 'authenticationRequestBody' of type 'Job_Offre.Controllers.AuthenticationController+AuthenticationRequestBody' ...
+2023-06-07 11:32:43.326 +02:00 [DBG] Attempting to bind parameter 'authenticationRequestBody' of type 'Job_Offre.Controllers.AuthenticationController+AuthenticationRequestBody' using the name '' in request data ...
+2023-06-07 11:32:43.337 +02:00 [DBG] Rejected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonPatchInputFormatter' for content type 'application/json'.
+2023-06-07 11:32:43.344 +02:00 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonInputFormatter' for content type 'application/json'.
+2023-06-07 11:32:43.369 +02:00 [DBG] Connection id "0HMR7739PUN7U", Request id "0HMR7739PUN7U:00000003": started reading request body.
+2023-06-07 11:32:43.377 +02:00 [DBG] Connection id "0HMR7739PUN7U", Request id "0HMR7739PUN7U:00000003": done reading request body.
+2023-06-07 11:32:43.781 +02:00 [DBG] Done attempting to bind parameter 'authenticationRequestBody' of type 'Job_Offre.Controllers.AuthenticationController+AuthenticationRequestBody'.
+2023-06-07 11:32:43.787 +02:00 [DBG] Done attempting to bind parameter 'authenticationRequestBody' of type 'Job_Offre.Controllers.AuthenticationController+AuthenticationRequestBody'.
+2023-06-07 11:32:43.791 +02:00 [DBG] Attempting to validate the bound parameter 'authenticationRequestBody' of type 'Job_Offre.Controllers.AuthenticationController+AuthenticationRequestBody' ...
+2023-06-07 11:32:43.817 +02:00 [DBG] Done attempting to validate the bound parameter 'authenticationRequestBody' of type 'Job_Offre.Controllers.AuthenticationController+AuthenticationRequestBody'.
+2023-06-07 11:32:44.900 +02:00 [DBG] An additional 'IServiceProvider' was created for internal use by Entity Framework. An existing service provider was not used due to the following configuration changes: configuration changed for 'Core:ConfigureWarnings', configuration added for 'SqlServer'.
+2023-06-07 11:32:47.031 +02:00 [DBG] The index {'JobCode'} was not created on entity type 'TrAppApply' as the properties are already covered by the index {'JobCode', 'CandidateCode'}.
+2023-06-07 11:32:47.038 +02:00 [DBG] The index {'SkillCode'} was not created on entity type 'TrCskCandidateSkill' as the properties are already covered by the index {'SkillCode', 'CandidateCode'}.
+2023-06-07 11:32:47.048 +02:00 [DBG] The index {'ExpCode'} was not created on entity type 'TrHexHaveExperience' as the properties are already covered by the index {'ExpCode', 'CandidateCode', 'SkillCode', 'DomainCode'}.
+2023-06-07 11:32:47.051 +02:00 [DBG] The index {'FormCode'} was not created on entity type 'TrHfrHaveFormation' as the properties are already covered by the index {'FormCode', 'CandidateCode'}.
+2023-06-07 11:32:47.055 +02:00 [DBG] The index {'CandidateCode'} was not created on entity type 'TrHprHavePreference' as the properties are already covered by the index {'CandidateCode', 'PrefCode', 'DomainCode'}.
+2023-06-07 11:32:47.059 +02:00 [DBG] The index {'SkillCode'} was not created on entity type 'TrRtoRelatedTo (Dictionary<string, object>)' as the properties are already covered by the index {'SkillCode', 'JobCode'}.
+2023-06-07 11:32:48.011 +02:00 [INF] Entity Framework Core 6.0.0 initialized 'offres_JobContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2023-06-07 11:32:48.673 +02:00 [DBG] Compiling query expression: 
+'DbSet<TmRecRecruiter>()
+    .Join(
+        inner: DbSet<TmUsrUserAccount>(), 
+        outerKeySelector: rec => rec.UserCode, 
+        innerKeySelector: usr => (int?)usr.UserCode, 
+        resultSelector: (rec, usr) => new { 
+            rec = rec, 
+            usr = usr
+         })
+    .Where(<>h__TransparentIdentifier0 => <>h__TransparentIdentifier0.rec.RecruiterAdress == __mail_0)
+    .Select(<>h__TransparentIdentifier0 => new TmUsrUserAccount{ 
+        UserCode = <>h__TransparentIdentifier0.usr.UserCode, 
+        UserName = <>h__TransparentIdentifier0.usr.UserName, 
+        UserPw = <>h__TransparentIdentifier0.usr.UserPw, 
+        RoleCode = <>h__TransparentIdentifier0.usr.RoleCode 
+    }
+    )
+    .First()'
+2023-06-07 11:32:49.641 +02:00 [DBG] Generated query execution expression: 
+'queryContext => ShapedQueryCompilingExpressionVisitor.SingleAsync<TmUsrUserAccount>(
+    asyncEnumerable: new SingleQueryingEnumerable<TmUsrUserAccount>(
+        (RelationalQueryContext)queryContext, 
+        RelationalCommandCache.SelectExpression(
+            Projection Mapping:
+                UserCode -> 0
+                UserName -> 1
+                UserPw -> 2
+                RoleCode -> 3
+            SELECT TOP(1) t0.User_Code AS UserCode, t0.User_Name AS UserName, t0.User_Pw AS UserPw, t0.Role_Code AS RoleCode
+            FROM TM_REC_Recruiter AS t
+            INNER JOIN TM_USR_User_Account AS t0 ON t.User_Code == t0.User_Code
+            WHERE t.Recruiter_Adress == @__mail_0), 
+        Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, TmUsrUserAccount>, 
+        Job_Offre.Entities.offres_JobContext, 
+        False, 
+        False, 
+        True
+    ), 
+    cancellationToken: queryContext.CancellationToken)'
+2023-06-07 11:32:49.846 +02:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2023-06-07 11:32:49.990 +02:00 [DBG] Created DbCommand for 'ExecuteReader' (136ms).
+2023-06-07 11:32:50.048 +02:00 [DBG] Opening connection to database 'offres_Job' on server 'DESKTOP-SIA6P18\SQLEXPRESS'.
+2023-06-07 11:32:51.999 +02:00 [DBG] Opened connection to database 'offres_Job' on server 'DESKTOP-SIA6P18\SQLEXPRESS'.
+2023-06-07 11:32:52.050 +02:00 [DBG] Executing DbCommand [Parameters=[@__mail_0='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t0].[User_Code] AS [UserCode], [t0].[User_Name] AS [UserName], [t0].[User_Pw] AS [UserPw], [t0].[Role_Code] AS [RoleCode]
+FROM [TM_REC_Recruiter] AS [t]
+INNER JOIN [TM_USR_User_Account] AS [t0] ON [t].[User_Code] = [t0].[User_Code]
+WHERE [t].[Recruiter_Adress] = @__mail_0
+2023-06-07 11:32:52.330 +02:00 [INF] Executed DbCommand (287ms) [Parameters=[@__mail_0='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t0].[User_Code] AS [UserCode], [t0].[User_Name] AS [UserName], [t0].[User_Pw] AS [UserPw], [t0].[Role_Code] AS [RoleCode]
+FROM [TM_REC_Recruiter] AS [t]
+INNER JOIN [TM_USR_User_Account] AS [t0] ON [t].[User_Code] = [t0].[User_Code]
+WHERE [t].[Recruiter_Adress] = @__mail_0
+2023-06-07 11:32:52.495 +02:00 [DBG] A data reader was disposed.
+2023-06-07 11:32:52.530 +02:00 [DBG] Closing connection to database 'offres_Job' on server 'DESKTOP-SIA6P18\SQLEXPRESS'.
+2023-06-07 11:32:52.575 +02:00 [DBG] Closed connection to database 'offres_Job' on server 'DESKTOP-SIA6P18\SQLEXPRESS'.
+2023-06-07 11:32:53.379 +02:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.XmlDataContractSerializerOutputFormatter"]
+2023-06-07 11:32:53.408 +02:00 [DBG] No information found on request to perform content negotiation.
+2023-06-07 11:32:53.411 +02:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2023-06-07 11:32:53.422 +02:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2023-06-07 11:32:53.429 +02:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter' and content type 'text/plain' to write the response.
+2023-06-07 11:32:53.435 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-06-07 11:32:53.461 +02:00 [INF] Executed action Job_Offre.Controllers.AuthenticationController.Authenticate (Job_Offre) in 11089.3445ms
+2023-06-07 11:32:53.470 +02:00 [INF] Executed endpoint 'Job_Offre.Controllers.AuthenticationController.Authenticate (Job_Offre)'
+2023-06-07 11:32:53.496 +02:00 [DBG] 'offres_JobContext' disposed.
+2023-06-07 11:32:53.526 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7101/api/authentiation/authenticate application/json 74 - 200 - text/plain;+charset=utf-8 11875.7094ms
+2023-06-07 11:35:11.712 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7101/api/authentiation/authenticate - -
+2023-06-07 11:35:11.722 +02:00 [DBG] The request has an origin header: 'http://localhost:4200'.
+2023-06-07 11:35:11.740 +02:00 [INF] CORS policy execution successful.
+2023-06-07 11:35:11.745 +02:00 [DBG] The request is a preflight request.
+2023-06-07 11:35:11.753 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7101/api/authentiation/authenticate - - - 204 - - 40.8472ms
+2023-06-07 11:35:11.760 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7101/api/authentiation/authenticate application/json 74
+2023-06-07 11:35:11.768 +02:00 [DBG] The request has an origin header: 'http://localhost:4200'.
+2023-06-07 11:35:11.776 +02:00 [INF] CORS policy execution successful.
+2023-06-07 11:35:11.800 +02:00 [DBG] POST requests are not supported
+2023-06-07 11:35:11.811 +02:00 [DBG] 1 candidate(s) found for the request path '/api/authentiation/authenticate'
+2023-06-07 11:35:11.820 +02:00 [DBG] Endpoint 'Job_Offre.Controllers.AuthenticationController.Authenticate (Job_Offre)' with route pattern 'api/authentiation/authenticate' is valid for the request path '/api/authentiation/authenticate'
+2023-06-07 11:35:11.835 +02:00 [DBG] Request matched endpoint 'Job_Offre.Controllers.AuthenticationController.Authenticate (Job_Offre)'
+2023-06-07 11:35:11.846 +02:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2023-06-07 11:35:11.855 +02:00 [INF] Executing endpoint 'Job_Offre.Controllers.AuthenticationController.Authenticate (Job_Offre)'
+2023-06-07 11:35:11.865 +02:00 [INF] Route matched with {action = "Authenticate", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.String]] Authenticate(AuthenticationRequestBody) on controller Job_Offre.Controllers.AuthenticationController (Job_Offre).
+2023-06-07 11:35:11.882 +02:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2023-06-07 11:35:11.896 +02:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2023-06-07 11:35:11.907 +02:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2023-06-07 11:35:11.930 +02:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2023-06-07 11:35:11.944 +02:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2023-06-07 11:35:11.960 +02:00 [DBG] Executing controller factory for controller Job_Offre.Controllers.AuthenticationController (Job_Offre)
+2023-06-07 11:35:12.027 +02:00 [DBG] Executed controller factory for controller Job_Offre.Controllers.AuthenticationController (Job_Offre)
+2023-06-07 11:35:12.034 +02:00 [DBG] Attempting to bind parameter 'authenticationRequestBody' of type 'Job_Offre.Controllers.AuthenticationController+AuthenticationRequestBody' ...
+2023-06-07 11:35:12.041 +02:00 [DBG] Attempting to bind parameter 'authenticationRequestBody' of type 'Job_Offre.Controllers.AuthenticationController+AuthenticationRequestBody' using the name '' in request data ...
+2023-06-07 11:35:12.044 +02:00 [DBG] Rejected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonPatchInputFormatter' for content type 'application/json'.
+2023-06-07 11:35:12.049 +02:00 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonInputFormatter' for content type 'application/json'.
+2023-06-07 11:35:12.056 +02:00 [DBG] Connection id "0HMR7739PUN7U", Request id "0HMR7739PUN7U:00000007": started reading request body.
+2023-06-07 11:35:12.062 +02:00 [DBG] Connection id "0HMR7739PUN7U", Request id "0HMR7739PUN7U:00000007": done reading request body.
+2023-06-07 11:35:12.069 +02:00 [DBG] Done attempting to bind parameter 'authenticationRequestBody' of type 'Job_Offre.Controllers.AuthenticationController+AuthenticationRequestBody'.
+2023-06-07 11:35:12.072 +02:00 [DBG] Done attempting to bind parameter 'authenticationRequestBody' of type 'Job_Offre.Controllers.AuthenticationController+AuthenticationRequestBody'.
+2023-06-07 11:35:12.077 +02:00 [DBG] Attempting to validate the bound parameter 'authenticationRequestBody' of type 'Job_Offre.Controllers.AuthenticationController+AuthenticationRequestBody' ...
+2023-06-07 11:35:12.082 +02:00 [DBG] Done attempting to validate the bound parameter 'authenticationRequestBody' of type 'Job_Offre.Controllers.AuthenticationController+AuthenticationRequestBody'.
+2023-06-07 11:35:12.105 +02:00 [INF] Entity Framework Core 6.0.0 initialized 'offres_JobContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2023-06-07 11:35:12.131 +02:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2023-06-07 11:35:12.136 +02:00 [DBG] Created DbCommand for 'ExecuteReader' (4ms).
+2023-06-07 11:35:12.142 +02:00 [DBG] Opening connection to database 'offres_Job' on server 'DESKTOP-SIA6P18\SQLEXPRESS'.
+2023-06-07 11:35:12.153 +02:00 [DBG] Opened connection to database 'offres_Job' on server 'DESKTOP-SIA6P18\SQLEXPRESS'.
+2023-06-07 11:35:12.159 +02:00 [DBG] Executing DbCommand [Parameters=[@__mail_0='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t0].[User_Code] AS [UserCode], [t0].[User_Name] AS [UserName], [t0].[User_Pw] AS [UserPw], [t0].[Role_Code] AS [RoleCode]
+FROM [TM_REC_Recruiter] AS [t]
+INNER JOIN [TM_USR_User_Account] AS [t0] ON [t].[User_Code] = [t0].[User_Code]
+WHERE [t].[Recruiter_Adress] = @__mail_0
+2023-06-07 11:35:12.184 +02:00 [INF] Executed DbCommand (25ms) [Parameters=[@__mail_0='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t0].[User_Code] AS [UserCode], [t0].[User_Name] AS [UserName], [t0].[User_Pw] AS [UserPw], [t0].[Role_Code] AS [RoleCode]
+FROM [TM_REC_Recruiter] AS [t]
+INNER JOIN [TM_USR_User_Account] AS [t0] ON [t].[User_Code] = [t0].[User_Code]
+WHERE [t].[Recruiter_Adress] = @__mail_0
+2023-06-07 11:35:12.196 +02:00 [DBG] A data reader was disposed.
+2023-06-07 11:35:12.201 +02:00 [DBG] Closing connection to database 'offres_Job' on server 'DESKTOP-SIA6P18\SQLEXPRESS'.
+2023-06-07 11:35:12.205 +02:00 [DBG] Closed connection to database 'offres_Job' on server 'DESKTOP-SIA6P18\SQLEXPRESS'.
+2023-06-07 11:35:12.208 +02:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.XmlDataContractSerializerOutputFormatter"]
+2023-06-07 11:35:12.222 +02:00 [DBG] No information found on request to perform content negotiation.
+2023-06-07 11:35:12.225 +02:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2023-06-07 11:35:12.230 +02:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2023-06-07 11:35:12.234 +02:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter' and content type 'text/plain' to write the response.
+2023-06-07 11:35:12.238 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-06-07 11:35:12.241 +02:00 [INF] Executed action Job_Offre.Controllers.AuthenticationController.Authenticate (Job_Offre) in 281.4876ms
+2023-06-07 11:35:12.244 +02:00 [INF] Executed endpoint 'Job_Offre.Controllers.AuthenticationController.Authenticate (Job_Offre)'
+2023-06-07 11:35:12.248 +02:00 [DBG] 'offres_JobContext' disposed.
+2023-06-07 11:35:12.253 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7101/api/authentiation/authenticate application/json 74 - 200 - text/plain;+charset=utf-8 493.1168ms
+2023-06-07 11:35:19.779 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7101/api/Job/GetJob - -
+2023-06-07 11:35:19.787 +02:00 [DBG] The request has an origin header: 'http://localhost:4200'.
+2023-06-07 11:35:19.794 +02:00 [INF] CORS policy execution successful.
+2023-06-07 11:35:19.803 +02:00 [DBG] The request is a preflight request.
+2023-06-07 11:35:19.820 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7101/api/Job/GetJob - - - 204 - - 40.7471ms
+2023-06-07 11:35:19.838 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7101/api/Job/GetJob - -
+2023-06-07 11:35:19.845 +02:00 [DBG] The request has an origin header: 'http://localhost:4200'.
+2023-06-07 11:35:19.854 +02:00 [INF] CORS policy execution successful.
+2023-06-07 11:35:19.862 +02:00 [DBG] The request path  does not match the path filter
+2023-06-07 11:35:19.871 +02:00 [DBG] 2 candidate(s) found for the request path '/api/Job/GetJob'
+2023-06-07 11:35:19.880 +02:00 [DBG] Endpoint 'Job_Offre.Controllers.JobController.GetJob (Job_Offre)' with route pattern 'api/Job/GetJob' is valid for the request path '/api/Job/GetJob'
+2023-06-07 11:35:19.896 +02:00 [DBG] Endpoint 'Job_Offre.Controllers.JobController.GetJobByJobCode (Job_Offre)' with route pattern 'api/Job/{JobCode}' is valid for the request path '/api/Job/GetJob'
+2023-06-07 11:35:19.910 +02:00 [DBG] Request matched endpoint 'Job_Offre.Controllers.JobController.GetJob (Job_Offre)'
+2023-06-07 11:35:20.179 +02:00 [DBG] Successfully validated the token.
+2023-06-07 11:35:20.186 +02:00 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2023-06-07 11:35:20.202 +02:00 [DBG] Authorization was successful.
+2023-06-07 11:35:20.209 +02:00 [INF] Executing endpoint 'Job_Offre.Controllers.JobController.GetJob (Job_Offre)'
+2023-06-07 11:35:20.221 +02:00 [INF] Route matched with {action = "GetJob", controller = "Job"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Job_Offre.Models.JobDto]]] GetJob() on controller Job_Offre.Controllers.JobController (Job_Offre).
+2023-06-07 11:35:20.231 +02:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2023-06-07 11:35:20.236 +02:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2023-06-07 11:35:20.239 +02:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2023-06-07 11:35:20.244 +02:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2023-06-07 11:35:20.249 +02:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2023-06-07 11:35:20.252 +02:00 [DBG] Executing controller factory for controller Job_Offre.Controllers.JobController (Job_Offre)
+2023-06-07 11:35:20.258 +02:00 [DBG] Executed controller factory for controller Job_Offre.Controllers.JobController (Job_Offre)
+2023-06-07 11:35:20.380 +02:00 [INF] Entity Framework Core 6.0.0 initialized 'offres_JobContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2023-06-07 11:35:20.403 +02:00 [DBG] Compiling query expression: 
+'DbSet<TmJobJob>()
+    .OrderBy(c => c.JobCode)'
+2023-06-07 11:35:20.507 +02:00 [DBG] Generated query execution expression: 
+'queryContext => new SingleQueryingEnumerable<TmJobJob>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.SelectExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: TmJobJob.JobCode (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: TmJobJob.CtrCode (int) Required FK Index, 1], [Property: TmJobJob.DomainCode (int) Required FK Index, 2], [Property: TmJobJob.EnglishLevel (string) Required MaxLength(50) Ansi, 3], [Property: TmJobJob.FrenchLevel (string) Required MaxLength(50) Ansi, 4], [Property: TmJobJob.Graduate (string) Required MaxLength(50) Ansi, 5], [Property: TmJobJob.JobDesc (string) Required MaxLength(200) Ansi, 6], [Property: TmJobJob.JobExpDate (DateTime?), 7], [Property: TmJobJob.JobLevel (string) Required MaxLength(100) Ansi, 8], [Property: TmJobJob.JobMode (string) MaxLength(100) Ansi, 9], [Property: TmJobJob.JobName (string) Required MaxLength(100) Ansi, 10], [Property: TmJobJob.NumberOfPosts (int) Required, 11], [Property: TmJobJob.RecruiterCode (int) Required FK Index, 12], [Property: TmJobJob.RegionCode (int) Required FK Index, 13], [Property: TmJobJob.YearExperienceRequired (int) Required, 14] }
+        SELECT t.Job_Code, t.Ctr_Code, t.Domain_Code, t.English_Level, t.French_Level, t.Graduate, t.Job_Desc, t.Job_Exp_Date, t.Job_Level, t.Job_Mode, t.Job_name, t.number_of_posts, t.Recruiter_Code, t.Region_Code, t.year_experience_required
+        FROM TM_JOB_Job AS t
+        ORDER BY t.Job_Code ASC), 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, TmJobJob>, 
+    Job_Offre.Entities.offres_JobContext, 
+    False, 
+    False, 
+    True
+)'
+2023-06-07 11:35:20.523 +02:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2023-06-07 11:35:20.529 +02:00 [DBG] Created DbCommand for 'ExecuteReader' (5ms).
+2023-06-07 11:35:20.535 +02:00 [DBG] Opening connection to database 'offres_Job' on server 'DESKTOP-SIA6P18\SQLEXPRESS'.
+2023-06-07 11:35:20.537 +02:00 [DBG] Opened connection to database 'offres_Job' on server 'DESKTOP-SIA6P18\SQLEXPRESS'.
+2023-06-07 11:35:20.539 +02:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Job_Code], [t].[Ctr_Code], [t].[Domain_Code], [t].[English_Level], [t].[French_Level], [t].[Graduate], [t].[Job_Desc], [t].[Job_Exp_Date], [t].[Job_Level], [t].[Job_Mode], [t].[Job_name], [t].[number_of_posts], [t].[Recruiter_Code], [t].[Region_Code], [t].[year_experience_required]
+FROM [TM_JOB_Job] AS [t]
+ORDER BY [t].[Job_Code]
+2023-06-07 11:35:20.548 +02:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Job_Code], [t].[Ctr_Code], [t].[Domain_Code], [t].[English_Level], [t].[French_Level], [t].[Graduate], [t].[Job_Desc], [t].[Job_Exp_Date], [t].[Job_Level], [t].[Job_Mode], [t].[Job_name], [t].[number_of_posts], [t].[Recruiter_Code], [t].[Region_Code], [t].[year_experience_required]
+FROM [TM_JOB_Job] AS [t]
+ORDER BY [t].[Job_Code]
+2023-06-07 11:35:20.650 +02:00 [DBG] Context 'offres_JobContext' started tracking 'TmJobJob' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-06-07 11:35:20.762 +02:00 [DBG] Context 'offres_JobContext' started tracking 'TmJobJob' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-06-07 11:35:20.768 +02:00 [DBG] Context 'offres_JobContext' started tracking 'TmJobJob' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-06-07 11:35:20.773 +02:00 [DBG] Context 'offres_JobContext' started tracking 'TmJobJob' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-06-07 11:35:20.778 +02:00 [DBG] Context 'offres_JobContext' started tracking 'TmJobJob' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-06-07 11:35:20.785 +02:00 [DBG] Context 'offres_JobContext' started tracking 'TmJobJob' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-06-07 11:35:20.793 +02:00 [DBG] Context 'offres_JobContext' started tracking 'TmJobJob' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-06-07 11:35:20.801 +02:00 [DBG] Context 'offres_JobContext' started tracking 'TmJobJob' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-06-07 11:35:20.808 +02:00 [DBG] Context 'offres_JobContext' started tracking 'TmJobJob' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-06-07 11:35:20.815 +02:00 [DBG] Context 'offres_JobContext' started tracking 'TmJobJob' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-06-07 11:35:20.821 +02:00 [DBG] Context 'offres_JobContext' started tracking 'TmJobJob' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-06-07 11:35:20.826 +02:00 [DBG] Context 'offres_JobContext' started tracking 'TmJobJob' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-06-07 11:35:20.829 +02:00 [DBG] Context 'offres_JobContext' started tracking 'TmJobJob' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-06-07 11:35:20.833 +02:00 [DBG] A data reader was disposed.
+2023-06-07 11:35:20.834 +02:00 [DBG] Closing connection to database 'offres_Job' on server 'DESKTOP-SIA6P18\SQLEXPRESS'.
+2023-06-07 11:35:20.836 +02:00 [DBG] Closed connection to database 'offres_Job' on server 'DESKTOP-SIA6P18\SQLEXPRESS'.
+2023-06-07 11:35:20.912 +02:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.XmlDataContractSerializerOutputFormatter"]
+2023-06-07 11:35:20.926 +02:00 [DBG] No information found on request to perform content negotiation.
+2023-06-07 11:35:20.929 +02:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2023-06-07 11:35:20.932 +02:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2023-06-07 11:35:20.936 +02:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter' and content type 'application/json' to write the response.
+2023-06-07 11:35:20.942 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Job_Offre.Models.JobDto, Job_Offre, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-06-07 11:35:21.088 +02:00 [INF] Executed action Job_Offre.Controllers.JobController.GetJob (Job_Offre) in 836.4576ms
+2023-06-07 11:35:21.095 +02:00 [INF] Executed endpoint 'Job_Offre.Controllers.JobController.GetJob (Job_Offre)'
+2023-06-07 11:35:21.102 +02:00 [DBG] 'offres_JobContext' disposed.
+2023-06-07 11:35:21.106 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7101/api/Job/GetJob - - - 200 6237 application/json;+charset=utf-8 1268.7330ms
+2023-06-07 11:35:47.678 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7101/api/authentiation/authenticate - -
+2023-06-07 11:35:47.708 +02:00 [DBG] The request has an origin header: 'http://localhost:4200'.
+2023-06-07 11:35:47.716 +02:00 [INF] CORS policy execution successful.
+2023-06-07 11:35:47.723 +02:00 [DBG] The request is a preflight request.
+2023-06-07 11:35:47.732 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7101/api/authentiation/authenticate - - - 204 - - 53.2137ms
+2023-06-07 11:35:47.750 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7101/api/authentiation/authenticate application/json 74
+2023-06-07 11:35:47.757 +02:00 [DBG] The request has an origin header: 'http://localhost:4200'.
+2023-06-07 11:35:47.766 +02:00 [INF] CORS policy execution successful.
+2023-06-07 11:35:47.774 +02:00 [DBG] POST requests are not supported
+2023-06-07 11:35:47.781 +02:00 [DBG] 1 candidate(s) found for the request path '/api/authentiation/authenticate'
+2023-06-07 11:35:47.792 +02:00 [DBG] Endpoint 'Job_Offre.Controllers.AuthenticationController.Authenticate (Job_Offre)' with route pattern 'api/authentiation/authenticate' is valid for the request path '/api/authentiation/authenticate'
+2023-06-07 11:35:47.810 +02:00 [DBG] Request matched endpoint 'Job_Offre.Controllers.AuthenticationController.Authenticate (Job_Offre)'
+2023-06-07 11:35:47.819 +02:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2023-06-07 11:35:47.828 +02:00 [INF] Executing endpoint 'Job_Offre.Controllers.AuthenticationController.Authenticate (Job_Offre)'
+2023-06-07 11:35:47.838 +02:00 [INF] Route matched with {action = "Authenticate", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.String]] Authenticate(AuthenticationRequestBody) on controller Job_Offre.Controllers.AuthenticationController (Job_Offre).
+2023-06-07 11:35:47.854 +02:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2023-06-07 11:35:47.868 +02:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2023-06-07 11:35:47.884 +02:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2023-06-07 11:35:47.904 +02:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2023-06-07 11:35:47.917 +02:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2023-06-07 11:35:47.937 +02:00 [DBG] Executing controller factory for controller Job_Offre.Controllers.AuthenticationController (Job_Offre)
+2023-06-07 11:35:47.952 +02:00 [DBG] Executed controller factory for controller Job_Offre.Controllers.AuthenticationController (Job_Offre)
+2023-06-07 11:35:47.966 +02:00 [DBG] Attempting to bind parameter 'authenticationRequestBody' of type 'Job_Offre.Controllers.AuthenticationController+AuthenticationRequestBody' ...
+2023-06-07 11:35:47.979 +02:00 [DBG] Attempting to bind parameter 'authenticationRequestBody' of type 'Job_Offre.Controllers.AuthenticationController+AuthenticationRequestBody' using the name '' in request data ...
+2023-06-07 11:35:48.001 +02:00 [DBG] Rejected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonPatchInputFormatter' for content type 'application/json'.
+2023-06-07 11:35:48.017 +02:00 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonInputFormatter' for content type 'application/json'.
+2023-06-07 11:35:48.033 +02:00 [DBG] Connection id "0HMR7739PUN7U", Request id "0HMR7739PUN7U:0000000F": started reading request body.
+2023-06-07 11:35:48.043 +02:00 [DBG] Connection id "0HMR7739PUN7U", Request id "0HMR7739PUN7U:0000000F": done reading request body.
+2023-06-07 11:35:48.055 +02:00 [DBG] Done attempting to bind parameter 'authenticationRequestBody' of type 'Job_Offre.Controllers.AuthenticationController+AuthenticationRequestBody'.
+2023-06-07 11:35:48.067 +02:00 [DBG] Done attempting to bind parameter 'authenticationRequestBody' of type 'Job_Offre.Controllers.AuthenticationController+AuthenticationRequestBody'.
+2023-06-07 11:35:48.079 +02:00 [DBG] Attempting to validate the bound parameter 'authenticationRequestBody' of type 'Job_Offre.Controllers.AuthenticationController+AuthenticationRequestBody' ...
+2023-06-07 11:35:48.090 +02:00 [DBG] Done attempting to validate the bound parameter 'authenticationRequestBody' of type 'Job_Offre.Controllers.AuthenticationController+AuthenticationRequestBody'.
+2023-06-07 11:35:48.106 +02:00 [INF] Entity Framework Core 6.0.0 initialized 'offres_JobContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2023-06-07 11:35:48.127 +02:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2023-06-07 11:35:48.135 +02:00 [DBG] Created DbCommand for 'ExecuteReader' (8ms).
+2023-06-07 11:35:48.148 +02:00 [DBG] Opening connection to database 'offres_Job' on server 'DESKTOP-SIA6P18\SQLEXPRESS'.
+2023-06-07 11:35:48.158 +02:00 [DBG] Opened connection to database 'offres_Job' on server 'DESKTOP-SIA6P18\SQLEXPRESS'.
+2023-06-07 11:35:48.169 +02:00 [DBG] Executing DbCommand [Parameters=[@__mail_0='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t0].[User_Code] AS [UserCode], [t0].[User_Name] AS [UserName], [t0].[User_Pw] AS [UserPw], [t0].[Role_Code] AS [RoleCode]
+FROM [TM_REC_Recruiter] AS [t]
+INNER JOIN [TM_USR_User_Account] AS [t0] ON [t].[User_Code] = [t0].[User_Code]
+WHERE [t].[Recruiter_Adress] = @__mail_0
+2023-06-07 11:35:48.199 +02:00 [INF] Executed DbCommand (30ms) [Parameters=[@__mail_0='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t0].[User_Code] AS [UserCode], [t0].[User_Name] AS [UserName], [t0].[User_Pw] AS [UserPw], [t0].[Role_Code] AS [RoleCode]
+FROM [TM_REC_Recruiter] AS [t]
+INNER JOIN [TM_USR_User_Account] AS [t0] ON [t].[User_Code] = [t0].[User_Code]
+WHERE [t].[Recruiter_Adress] = @__mail_0
+2023-06-07 11:35:48.210 +02:00 [DBG] A data reader was disposed.
+2023-06-07 11:35:48.214 +02:00 [DBG] Closing connection to database 'offres_Job' on server 'DESKTOP-SIA6P18\SQLEXPRESS'.
+2023-06-07 11:35:48.220 +02:00 [DBG] Closed connection to database 'offres_Job' on server 'DESKTOP-SIA6P18\SQLEXPRESS'.
+2023-06-07 11:35:48.225 +02:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.XmlDataContractSerializerOutputFormatter"]
+2023-06-07 11:35:48.232 +02:00 [DBG] No information found on request to perform content negotiation.
+2023-06-07 11:35:48.234 +02:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2023-06-07 11:35:48.238 +02:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2023-06-07 11:35:48.241 +02:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter' and content type 'text/plain' to write the response.
+2023-06-07 11:35:48.248 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-06-07 11:35:48.253 +02:00 [INF] Executed action Job_Offre.Controllers.AuthenticationController.Authenticate (Job_Offre) in 316.2039ms
+2023-06-07 11:35:48.256 +02:00 [INF] Executed endpoint 'Job_Offre.Controllers.AuthenticationController.Authenticate (Job_Offre)'
+2023-06-07 11:35:48.261 +02:00 [DBG] 'offres_JobContext' disposed.
+2023-06-07 11:35:48.264 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7101/api/authentiation/authenticate application/json 74 - 200 - text/plain;+charset=utf-8 514.4392ms
+2023-06-07 11:35:53.353 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7101/api/Job/GetJob - -
+2023-06-07 11:35:53.359 +02:00 [DBG] The request has an origin header: 'http://localhost:4200'.
+2023-06-07 11:35:53.369 +02:00 [INF] CORS policy execution successful.
+2023-06-07 11:35:53.376 +02:00 [DBG] The request is a preflight request.
+2023-06-07 11:35:53.385 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7101/api/Job/GetJob - - - 204 - - 31.9997ms
+2023-06-07 11:35:53.392 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7101/api/Job/GetJob - -
+2023-06-07 11:35:53.400 +02:00 [DBG] The request has an origin header: 'http://localhost:4200'.
+2023-06-07 11:35:53.409 +02:00 [INF] CORS policy execution successful.
+2023-06-07 11:35:53.417 +02:00 [DBG] The request path  does not match the path filter
+2023-06-07 11:35:53.430 +02:00 [DBG] 2 candidate(s) found for the request path '/api/Job/GetJob'
+2023-06-07 11:35:53.440 +02:00 [DBG] Endpoint 'Job_Offre.Controllers.JobController.GetJob (Job_Offre)' with route pattern 'api/Job/GetJob' is valid for the request path '/api/Job/GetJob'
+2023-06-07 11:35:53.453 +02:00 [DBG] Endpoint 'Job_Offre.Controllers.JobController.GetJobByJobCode (Job_Offre)' with route pattern 'api/Job/{JobCode}' is valid for the request path '/api/Job/GetJob'
+2023-06-07 11:35:53.467 +02:00 [DBG] Request matched endpoint 'Job_Offre.Controllers.JobController.GetJob (Job_Offre)'
+2023-06-07 11:35:53.478 +02:00 [DBG] Successfully validated the token.
+2023-06-07 11:35:53.487 +02:00 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2023-06-07 11:35:53.500 +02:00 [DBG] Authorization was successful.
+2023-06-07 11:35:53.508 +02:00 [INF] Executing endpoint 'Job_Offre.Controllers.JobController.GetJob (Job_Offre)'
+2023-06-07 11:35:53.517 +02:00 [INF] Route matched with {action = "GetJob", controller = "Job"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Job_Offre.Models.JobDto]]] GetJob() on controller Job_Offre.Controllers.JobController (Job_Offre).
+2023-06-07 11:35:53.534 +02:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2023-06-07 11:35:53.540 +02:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2023-06-07 11:35:53.547 +02:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2023-06-07 11:35:53.557 +02:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2023-06-07 11:35:53.564 +02:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2023-06-07 11:35:53.570 +02:00 [DBG] Executing controller factory for controller Job_Offre.Controllers.JobController (Job_Offre)
+2023-06-07 11:35:53.573 +02:00 [DBG] Executed controller factory for controller Job_Offre.Controllers.JobController (Job_Offre)
+2023-06-07 11:35:53.576 +02:00 [INF] Entity Framework Core 6.0.0 initialized 'offres_JobContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2023-06-07 11:35:53.580 +02:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2023-06-07 11:35:53.583 +02:00 [DBG] Created DbCommand for 'ExecuteReader' (3ms).
+2023-06-07 11:35:53.587 +02:00 [DBG] Opening connection to database 'offres_Job' on server 'DESKTOP-SIA6P18\SQLEXPRESS'.
+2023-06-07 11:35:53.589 +02:00 [DBG] Opened connection to database 'offres_Job' on server 'DESKTOP-SIA6P18\SQLEXPRESS'.
+2023-06-07 11:35:53.592 +02:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Job_Code], [t].[Ctr_Code], [t].[Domain_Code], [t].[English_Level], [t].[French_Level], [t].[Graduate], [t].[Job_Desc], [t].[Job_Exp_Date], [t].[Job_Level], [t].[Job_Mode], [t].[Job_name], [t].[number_of_posts], [t].[Recruiter_Code], [t].[Region_Code], [t].[year_experience_required]
+FROM [TM_JOB_Job] AS [t]
+ORDER BY [t].[Job_Code]
+2023-06-07 11:35:53.600 +02:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Job_Code], [t].[Ctr_Code], [t].[Domain_Code], [t].[English_Level], [t].[French_Level], [t].[Graduate], [t].[Job_Desc], [t].[Job_Exp_Date], [t].[Job_Level], [t].[Job_Mode], [t].[Job_name], [t].[number_of_posts], [t].[Recruiter_Code], [t].[Region_Code], [t].[year_experience_required]
+FROM [TM_JOB_Job] AS [t]
+ORDER BY [t].[Job_Code]
+2023-06-07 11:35:53.605 +02:00 [DBG] Context 'offres_JobContext' started tracking 'TmJobJob' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-06-07 11:35:53.611 +02:00 [DBG] Context 'offres_JobContext' started tracking 'TmJobJob' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-06-07 11:35:53.614 +02:00 [DBG] Context 'offres_JobContext' started tracking 'TmJobJob' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-06-07 11:35:53.616 +02:00 [DBG] Context 'offres_JobContext' started tracking 'TmJobJob' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-06-07 11:35:53.619 +02:00 [DBG] Context 'offres_JobContext' started tracking 'TmJobJob' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-06-07 11:35:53.622 +02:00 [DBG] Context 'offres_JobContext' started tracking 'TmJobJob' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-06-07 11:35:53.625 +02:00 [DBG] Context 'offres_JobContext' started tracking 'TmJobJob' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-06-07 11:35:53.629 +02:00 [DBG] Context 'offres_JobContext' started tracking 'TmJobJob' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-06-07 11:35:53.636 +02:00 [DBG] Context 'offres_JobContext' started tracking 'TmJobJob' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-06-07 11:35:53.639 +02:00 [DBG] Context 'offres_JobContext' started tracking 'TmJobJob' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-06-07 11:35:53.643 +02:00 [DBG] Context 'offres_JobContext' started tracking 'TmJobJob' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-06-07 11:35:53.648 +02:00 [DBG] Context 'offres_JobContext' started tracking 'TmJobJob' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-06-07 11:35:53.652 +02:00 [DBG] Context 'offres_JobContext' started tracking 'TmJobJob' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-06-07 11:35:53.658 +02:00 [DBG] A data reader was disposed.
+2023-06-07 11:35:53.660 +02:00 [DBG] Closing connection to database 'offres_Job' on server 'DESKTOP-SIA6P18\SQLEXPRESS'.
+2023-06-07 11:35:53.663 +02:00 [DBG] Closed connection to database 'offres_Job' on server 'DESKTOP-SIA6P18\SQLEXPRESS'.
+2023-06-07 11:35:53.666 +02:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.XmlDataContractSerializerOutputFormatter"]
+2023-06-07 11:35:53.671 +02:00 [DBG] No information found on request to perform content negotiation.
+2023-06-07 11:35:53.673 +02:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2023-06-07 11:35:53.676 +02:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2023-06-07 11:35:53.680 +02:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter' and content type 'application/json' to write the response.
+2023-06-07 11:35:53.683 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Job_Offre.Models.JobDto, Job_Offre, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-06-07 11:35:53.689 +02:00 [INF] Executed action Job_Offre.Controllers.JobController.GetJob (Job_Offre) in 119.1804ms
+2023-06-07 11:35:53.697 +02:00 [INF] Executed endpoint 'Job_Offre.Controllers.JobController.GetJob (Job_Offre)'
+2023-06-07 11:35:53.702 +02:00 [DBG] 'offres_JobContext' disposed.
+2023-06-07 11:35:53.705 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7101/api/Job/GetJob - - - 200 6237 application/json;+charset=utf-8 313.4220ms
+2023-06-07 11:37:42.140 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7101/api/authentiation/authenticate - -
+2023-06-07 11:37:42.166 +02:00 [DBG] The request has an origin header: 'http://localhost:4200'.
+2023-06-07 11:37:42.174 +02:00 [INF] CORS policy execution successful.
+2023-06-07 11:37:42.180 +02:00 [DBG] The request is a preflight request.
+2023-06-07 11:37:42.188 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7101/api/authentiation/authenticate - - - 204 - - 48.2879ms
+2023-06-07 11:37:42.197 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7101/api/authentiation/authenticate application/json 74
+2023-06-07 11:37:42.205 +02:00 [DBG] The request has an origin header: 'http://localhost:4200'.
+2023-06-07 11:37:42.214 +02:00 [INF] CORS policy execution successful.
+2023-06-07 11:37:42.221 +02:00 [DBG] POST requests are not supported
+2023-06-07 11:37:42.229 +02:00 [DBG] 1 candidate(s) found for the request path '/api/authentiation/authenticate'
+2023-06-07 11:37:42.243 +02:00 [DBG] Endpoint 'Job_Offre.Controllers.AuthenticationController.Authenticate (Job_Offre)' with route pattern 'api/authentiation/authenticate' is valid for the request path '/api/authentiation/authenticate'
+2023-06-07 11:37:42.256 +02:00 [DBG] Request matched endpoint 'Job_Offre.Controllers.AuthenticationController.Authenticate (Job_Offre)'
+2023-06-07 11:37:42.266 +02:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2023-06-07 11:37:42.275 +02:00 [INF] Executing endpoint 'Job_Offre.Controllers.AuthenticationController.Authenticate (Job_Offre)'
+2023-06-07 11:37:42.285 +02:00 [INF] Route matched with {action = "Authenticate", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.String]] Authenticate(AuthenticationRequestBody) on controller Job_Offre.Controllers.AuthenticationController (Job_Offre).
+2023-06-07 11:37:42.300 +02:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2023-06-07 11:37:42.313 +02:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2023-06-07 11:37:42.328 +02:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2023-06-07 11:37:42.345 +02:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2023-06-07 11:37:42.357 +02:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2023-06-07 11:37:42.371 +02:00 [DBG] Executing controller factory for controller Job_Offre.Controllers.AuthenticationController (Job_Offre)
+2023-06-07 11:37:42.383 +02:00 [DBG] Executed controller factory for controller Job_Offre.Controllers.AuthenticationController (Job_Offre)
+2023-06-07 11:37:42.393 +02:00 [DBG] Attempting to bind parameter 'authenticationRequestBody' of type 'Job_Offre.Controllers.AuthenticationController+AuthenticationRequestBody' ...
+2023-06-07 11:37:42.410 +02:00 [DBG] Attempting to bind parameter 'authenticationRequestBody' of type 'Job_Offre.Controllers.AuthenticationController+AuthenticationRequestBody' using the name '' in request data ...
+2023-06-07 11:37:42.422 +02:00 [DBG] Rejected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonPatchInputFormatter' for content type 'application/json'.
+2023-06-07 11:37:42.438 +02:00 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonInputFormatter' for content type 'application/json'.
+2023-06-07 11:37:42.462 +02:00 [DBG] Connection id "0HMR7739PUN7U", Request id "0HMR7739PUN7U:00000017": started reading request body.
+2023-06-07 11:37:42.473 +02:00 [DBG] Connection id "0HMR7739PUN7U", Request id "0HMR7739PUN7U:00000017": done reading request body.
+2023-06-07 11:37:42.486 +02:00 [DBG] Done attempting to bind parameter 'authenticationRequestBody' of type 'Job_Offre.Controllers.AuthenticationController+AuthenticationRequestBody'.
+2023-06-07 11:37:42.502 +02:00 [DBG] Done attempting to bind parameter 'authenticationRequestBody' of type 'Job_Offre.Controllers.AuthenticationController+AuthenticationRequestBody'.
+2023-06-07 11:37:42.515 +02:00 [DBG] Attempting to validate the bound parameter 'authenticationRequestBody' of type 'Job_Offre.Controllers.AuthenticationController+AuthenticationRequestBody' ...
+2023-06-07 11:37:42.528 +02:00 [DBG] Done attempting to validate the bound parameter 'authenticationRequestBody' of type 'Job_Offre.Controllers.AuthenticationController+AuthenticationRequestBody'.
+2023-06-07 11:37:42.541 +02:00 [INF] Entity Framework Core 6.0.0 initialized 'offres_JobContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2023-06-07 11:37:42.559 +02:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2023-06-07 11:37:42.569 +02:00 [DBG] Created DbCommand for 'ExecuteReader' (9ms).
+2023-06-07 11:37:42.582 +02:00 [DBG] Opening connection to database 'offres_Job' on server 'DESKTOP-SIA6P18\SQLEXPRESS'.
+2023-06-07 11:37:42.592 +02:00 [DBG] Opened connection to database 'offres_Job' on server 'DESKTOP-SIA6P18\SQLEXPRESS'.
+2023-06-07 11:37:42.604 +02:00 [DBG] Executing DbCommand [Parameters=[@__mail_0='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t0].[User_Code] AS [UserCode], [t0].[User_Name] AS [UserName], [t0].[User_Pw] AS [UserPw], [t0].[Role_Code] AS [RoleCode]
+FROM [TM_REC_Recruiter] AS [t]
+INNER JOIN [TM_USR_User_Account] AS [t0] ON [t].[User_Code] = [t0].[User_Code]
+WHERE [t].[Recruiter_Adress] = @__mail_0
+2023-06-07 11:37:42.639 +02:00 [INF] Executed DbCommand (36ms) [Parameters=[@__mail_0='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t0].[User_Code] AS [UserCode], [t0].[User_Name] AS [UserName], [t0].[User_Pw] AS [UserPw], [t0].[Role_Code] AS [RoleCode]
+FROM [TM_REC_Recruiter] AS [t]
+INNER JOIN [TM_USR_User_Account] AS [t0] ON [t].[User_Code] = [t0].[User_Code]
+WHERE [t].[Recruiter_Adress] = @__mail_0
+2023-06-07 11:37:42.663 +02:00 [DBG] A data reader was disposed.
+2023-06-07 11:37:42.671 +02:00 [DBG] Closing connection to database 'offres_Job' on server 'DESKTOP-SIA6P18\SQLEXPRESS'.
+2023-06-07 11:37:42.684 +02:00 [DBG] Closed connection to database 'offres_Job' on server 'DESKTOP-SIA6P18\SQLEXPRESS'.
+2023-06-07 11:37:42.699 +02:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.XmlDataContractSerializerOutputFormatter"]
+2023-06-07 11:37:42.729 +02:00 [DBG] No information found on request to perform content negotiation.
+2023-06-07 11:37:42.738 +02:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2023-06-07 11:37:42.747 +02:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2023-06-07 11:37:42.754 +02:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter' and content type 'text/plain' to write the response.
+2023-06-07 11:37:42.771 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-06-07 11:37:42.786 +02:00 [INF] Executed action Job_Offre.Controllers.AuthenticationController.Authenticate (Job_Offre) in 415.0196ms
+2023-06-07 11:37:42.800 +02:00 [INF] Executed endpoint 'Job_Offre.Controllers.AuthenticationController.Authenticate (Job_Offre)'
+2023-06-07 11:37:42.811 +02:00 [DBG] 'offres_JobContext' disposed.
+2023-06-07 11:37:42.821 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7101/api/authentiation/authenticate application/json 74 - 200 - text/plain;+charset=utf-8 624.6028ms
+2023-06-07 11:39:36.805 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7101/api/Job/GetJob - -
+2023-06-07 11:39:36.818 +02:00 [DBG] The request has an origin header: 'http://localhost:4200'.
+2023-06-07 11:39:36.824 +02:00 [INF] CORS policy execution successful.
+2023-06-07 11:39:36.828 +02:00 [DBG] The request is a preflight request.
+2023-06-07 11:39:36.830 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7101/api/Job/GetJob - - - 204 - - 25.5713ms
+2023-06-07 11:39:36.839 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7101/api/Job/GetJob - -
+2023-06-07 11:39:36.843 +02:00 [DBG] The request has an origin header: 'http://localhost:4200'.
+2023-06-07 11:39:36.847 +02:00 [INF] CORS policy execution successful.
+2023-06-07 11:39:36.850 +02:00 [DBG] The request path  does not match the path filter
+2023-06-07 11:39:36.854 +02:00 [DBG] 2 candidate(s) found for the request path '/api/Job/GetJob'
+2023-06-07 11:39:36.857 +02:00 [DBG] Endpoint 'Job_Offre.Controllers.JobController.GetJob (Job_Offre)' with route pattern 'api/Job/GetJob' is valid for the request path '/api/Job/GetJob'
+2023-06-07 11:39:36.865 +02:00 [DBG] Endpoint 'Job_Offre.Controllers.JobController.GetJobByJobCode (Job_Offre)' with route pattern 'api/Job/{JobCode}' is valid for the request path '/api/Job/GetJob'
+2023-06-07 11:39:36.872 +02:00 [DBG] Request matched endpoint 'Job_Offre.Controllers.JobController.GetJob (Job_Offre)'
+2023-06-07 11:39:36.875 +02:00 [DBG] Successfully validated the token.
+2023-06-07 11:39:36.877 +02:00 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2023-06-07 11:39:36.882 +02:00 [DBG] Authorization was successful.
+2023-06-07 11:39:36.884 +02:00 [INF] Executing endpoint 'Job_Offre.Controllers.JobController.GetJob (Job_Offre)'
+2023-06-07 11:39:36.886 +02:00 [INF] Route matched with {action = "GetJob", controller = "Job"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Job_Offre.Models.JobDto]]] GetJob() on controller Job_Offre.Controllers.JobController (Job_Offre).
+2023-06-07 11:39:36.890 +02:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2023-06-07 11:39:36.893 +02:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2023-06-07 11:39:36.897 +02:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2023-06-07 11:39:36.908 +02:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2023-06-07 11:39:36.914 +02:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2023-06-07 11:39:36.922 +02:00 [DBG] Executing controller factory for controller Job_Offre.Controllers.JobController (Job_Offre)
+2023-06-07 11:39:36.930 +02:00 [DBG] Executed controller factory for controller Job_Offre.Controllers.JobController (Job_Offre)
+2023-06-07 11:39:36.937 +02:00 [INF] Entity Framework Core 6.0.0 initialized 'offres_JobContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2023-06-07 11:39:36.945 +02:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2023-06-07 11:39:36.949 +02:00 [DBG] Created DbCommand for 'ExecuteReader' (4ms).
+2023-06-07 11:39:36.955 +02:00 [DBG] Opening connection to database 'offres_Job' on server 'DESKTOP-SIA6P18\SQLEXPRESS'.
+2023-06-07 11:39:36.958 +02:00 [DBG] Opened connection to database 'offres_Job' on server 'DESKTOP-SIA6P18\SQLEXPRESS'.
+2023-06-07 11:39:36.963 +02:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Job_Code], [t].[Ctr_Code], [t].[Domain_Code], [t].[English_Level], [t].[French_Level], [t].[Graduate], [t].[Job_Desc], [t].[Job_Exp_Date], [t].[Job_Level], [t].[Job_Mode], [t].[Job_name], [t].[number_of_posts], [t].[Recruiter_Code], [t].[Region_Code], [t].[year_experience_required]
+FROM [TM_JOB_Job] AS [t]
+ORDER BY [t].[Job_Code]
+2023-06-07 11:39:36.972 +02:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Job_Code], [t].[Ctr_Code], [t].[Domain_Code], [t].[English_Level], [t].[French_Level], [t].[Graduate], [t].[Job_Desc], [t].[Job_Exp_Date], [t].[Job_Level], [t].[Job_Mode], [t].[Job_name], [t].[number_of_posts], [t].[Recruiter_Code], [t].[Region_Code], [t].[year_experience_required]
+FROM [TM_JOB_Job] AS [t]
+ORDER BY [t].[Job_Code]
+2023-06-07 11:39:36.980 +02:00 [DBG] Context 'offres_JobContext' started tracking 'TmJobJob' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-06-07 11:39:36.985 +02:00 [DBG] Context 'offres_JobContext' started tracking 'TmJobJob' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-06-07 11:39:36.987 +02:00 [DBG] Context 'offres_JobContext' started tracking 'TmJobJob' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-06-07 11:39:36.990 +02:00 [DBG] Context 'offres_JobContext' started tracking 'TmJobJob' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-06-07 11:39:36.992 +02:00 [DBG] Context 'offres_JobContext' started tracking 'TmJobJob' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-06-07 11:39:36.995 +02:00 [DBG] Context 'offres_JobContext' started tracking 'TmJobJob' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-06-07 11:39:36.998 +02:00 [DBG] Context 'offres_JobContext' started tracking 'TmJobJob' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-06-07 11:39:37.004 +02:00 [DBG] Context 'offres_JobContext' started tracking 'TmJobJob' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-06-07 11:39:37.010 +02:00 [DBG] Context 'offres_JobContext' started tracking 'TmJobJob' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-06-07 11:39:37.013 +02:00 [DBG] Context 'offres_JobContext' started tracking 'TmJobJob' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-06-07 11:39:37.016 +02:00 [DBG] Context 'offres_JobContext' started tracking 'TmJobJob' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-06-07 11:39:37.019 +02:00 [DBG] Context 'offres_JobContext' started tracking 'TmJobJob' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-06-07 11:39:37.021 +02:00 [DBG] Context 'offres_JobContext' started tracking 'TmJobJob' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-06-07 11:39:37.026 +02:00 [DBG] A data reader was disposed.
+2023-06-07 11:39:37.029 +02:00 [DBG] Closing connection to database 'offres_Job' on server 'DESKTOP-SIA6P18\SQLEXPRESS'.
+2023-06-07 11:39:37.035 +02:00 [DBG] Closed connection to database 'offres_Job' on server 'DESKTOP-SIA6P18\SQLEXPRESS'.
+2023-06-07 11:39:37.041 +02:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.XmlDataContractSerializerOutputFormatter"]
+2023-06-07 11:39:37.046 +02:00 [DBG] No information found on request to perform content negotiation.
+2023-06-07 11:39:37.049 +02:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2023-06-07 11:39:37.051 +02:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2023-06-07 11:39:37.052 +02:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter' and content type 'application/json' to write the response.
+2023-06-07 11:39:37.057 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Job_Offre.Models.JobDto, Job_Offre, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-06-07 11:39:37.060 +02:00 [INF] Executed action Job_Offre.Controllers.JobController.GetJob (Job_Offre) in 137.8272ms
+2023-06-07 11:39:37.066 +02:00 [INF] Executed endpoint 'Job_Offre.Controllers.JobController.GetJob (Job_Offre)'
+2023-06-07 11:39:37.069 +02:00 [DBG] 'offres_JobContext' disposed.
+2023-06-07 11:39:37.074 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7101/api/Job/GetJob - - - 200 6237 application/json;+charset=utf-8 234.6231ms
+2023-06-07 11:40:56.361 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7101/api/authentiation/authenticate - -
+2023-06-07 11:40:56.368 +02:00 [DBG] The request has an origin header: 'http://localhost:4200'.
+2023-06-07 11:40:56.377 +02:00 [INF] CORS policy execution successful.
+2023-06-07 11:40:56.384 +02:00 [DBG] The request is a preflight request.
+2023-06-07 11:40:56.392 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7101/api/authentiation/authenticate - - - 204 - - 31.1541ms
+2023-06-07 11:40:56.414 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7101/api/authentiation/authenticate application/json 74
+2023-06-07 11:40:56.434 +02:00 [DBG] The request has an origin header: 'http://localhost:4200'.
+2023-06-07 11:40:56.442 +02:00 [INF] CORS policy execution successful.
+2023-06-07 11:40:56.449 +02:00 [DBG] POST requests are not supported
+2023-06-07 11:40:56.456 +02:00 [DBG] 1 candidate(s) found for the request path '/api/authentiation/authenticate'
+2023-06-07 11:40:56.464 +02:00 [DBG] Endpoint 'Job_Offre.Controllers.AuthenticationController.Authenticate (Job_Offre)' with route pattern 'api/authentiation/authenticate' is valid for the request path '/api/authentiation/authenticate'
+2023-06-07 11:40:56.481 +02:00 [DBG] Request matched endpoint 'Job_Offre.Controllers.AuthenticationController.Authenticate (Job_Offre)'
+2023-06-07 11:40:56.491 +02:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2023-06-07 11:40:56.500 +02:00 [INF] Executing endpoint 'Job_Offre.Controllers.AuthenticationController.Authenticate (Job_Offre)'
+2023-06-07 11:40:56.511 +02:00 [INF] Route matched with {action = "Authenticate", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.String]] Authenticate(AuthenticationRequestBody) on controller Job_Offre.Controllers.AuthenticationController (Job_Offre).
+2023-06-07 11:40:56.527 +02:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2023-06-07 11:40:56.540 +02:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2023-06-07 11:40:56.552 +02:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2023-06-07 11:40:56.568 +02:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2023-06-07 11:40:56.580 +02:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2023-06-07 11:40:56.593 +02:00 [DBG] Executing controller factory for controller Job_Offre.Controllers.AuthenticationController (Job_Offre)
+2023-06-07 11:40:56.605 +02:00 [DBG] Executed controller factory for controller Job_Offre.Controllers.AuthenticationController (Job_Offre)
+2023-06-07 11:40:56.616 +02:00 [DBG] Attempting to bind parameter 'authenticationRequestBody' of type 'Job_Offre.Controllers.AuthenticationController+AuthenticationRequestBody' ...
+2023-06-07 11:40:56.628 +02:00 [DBG] Attempting to bind parameter 'authenticationRequestBody' of type 'Job_Offre.Controllers.AuthenticationController+AuthenticationRequestBody' using the name '' in request data ...
+2023-06-07 11:40:56.641 +02:00 [DBG] Rejected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonPatchInputFormatter' for content type 'application/json'.
+2023-06-07 11:40:56.656 +02:00 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonInputFormatter' for content type 'application/json'.
+2023-06-07 11:40:56.667 +02:00 [DBG] Connection id "0HMR7739PUN7U", Request id "0HMR7739PUN7U:0000001F": started reading request body.
+2023-06-07 11:40:56.679 +02:00 [DBG] Connection id "0HMR7739PUN7U", Request id "0HMR7739PUN7U:0000001F": done reading request body.
+2023-06-07 11:40:56.689 +02:00 [DBG] Done attempting to bind parameter 'authenticationRequestBody' of type 'Job_Offre.Controllers.AuthenticationController+AuthenticationRequestBody'.
+2023-06-07 11:40:56.701 +02:00 [DBG] Done attempting to bind parameter 'authenticationRequestBody' of type 'Job_Offre.Controllers.AuthenticationController+AuthenticationRequestBody'.
+2023-06-07 11:40:56.716 +02:00 [DBG] Attempting to validate the bound parameter 'authenticationRequestBody' of type 'Job_Offre.Controllers.AuthenticationController+AuthenticationRequestBody' ...
+2023-06-07 11:40:56.732 +02:00 [DBG] Done attempting to validate the bound parameter 'authenticationRequestBody' of type 'Job_Offre.Controllers.AuthenticationController+AuthenticationRequestBody'.
+2023-06-07 11:40:56.747 +02:00 [INF] Entity Framework Core 6.0.0 initialized 'offres_JobContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2023-06-07 11:40:56.765 +02:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2023-06-07 11:40:56.773 +02:00 [DBG] Created DbCommand for 'ExecuteReader' (8ms).
+2023-06-07 11:40:56.784 +02:00 [DBG] Opening connection to database 'offres_Job' on server 'DESKTOP-SIA6P18\SQLEXPRESS'.
+2023-06-07 11:40:56.794 +02:00 [DBG] Opened connection to database 'offres_Job' on server 'DESKTOP-SIA6P18\SQLEXPRESS'.
+2023-06-07 11:40:56.806 +02:00 [DBG] Executing DbCommand [Parameters=[@__mail_0='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t0].[User_Code] AS [UserCode], [t0].[User_Name] AS [UserName], [t0].[User_Pw] AS [UserPw], [t0].[Role_Code] AS [RoleCode]
+FROM [TM_REC_Recruiter] AS [t]
+INNER JOIN [TM_USR_User_Account] AS [t0] ON [t].[User_Code] = [t0].[User_Code]
+WHERE [t].[Recruiter_Adress] = @__mail_0
+2023-06-07 11:40:56.835 +02:00 [INF] Executed DbCommand (29ms) [Parameters=[@__mail_0='?' (Size = 100) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t0].[User_Code] AS [UserCode], [t0].[User_Name] AS [UserName], [t0].[User_Pw] AS [UserPw], [t0].[Role_Code] AS [RoleCode]
+FROM [TM_REC_Recruiter] AS [t]
+INNER JOIN [TM_USR_User_Account] AS [t0] ON [t].[User_Code] = [t0].[User_Code]
+WHERE [t].[Recruiter_Adress] = @__mail_0
+2023-06-07 11:40:56.846 +02:00 [DBG] A data reader was disposed.
+2023-06-07 11:40:56.849 +02:00 [DBG] Closing connection to database 'offres_Job' on server 'DESKTOP-SIA6P18\SQLEXPRESS'.
+2023-06-07 11:40:56.850 +02:00 [DBG] Closed connection to database 'offres_Job' on server 'DESKTOP-SIA6P18\SQLEXPRESS'.
+2023-06-07 11:40:56.856 +02:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.XmlDataContractSerializerOutputFormatter"]
+2023-06-07 11:40:56.864 +02:00 [DBG] No information found on request to perform content negotiation.
+2023-06-07 11:40:56.866 +02:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2023-06-07 11:40:56.870 +02:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2023-06-07 11:40:56.873 +02:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter' and content type 'text/plain' to write the response.
+2023-06-07 11:40:56.878 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-06-07 11:40:56.884 +02:00 [INF] Executed action Job_Offre.Controllers.AuthenticationController.Authenticate (Job_Offre) in 291.449ms
+2023-06-07 11:40:56.888 +02:00 [INF] Executed endpoint 'Job_Offre.Controllers.AuthenticationController.Authenticate (Job_Offre)'
+2023-06-07 11:40:56.893 +02:00 [DBG] 'offres_JobContext' disposed.
+2023-06-07 11:40:56.899 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7101/api/authentiation/authenticate application/json 74 - 200 - text/plain;+charset=utf-8 487.4077ms
