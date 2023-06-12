@@ -40,8 +40,8 @@ namespace Job_Offre.Entities
         {
             if (!optionsBuilder.IsConfigured)
             {
-                //#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see SSPI https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("Data Source=DESKTOP-SIA6P18\\SQLEXPRESS;Initial Catalog=offres_Job;Integrated Security=true");
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
+                optionsBuilder.UseSqlServer("Data Source=DESKTOP-SIA6P18\\SQLEXPRESS;Initial Catalog=offres_Job;Integrated Security=True");
             }
         }
 
@@ -485,13 +485,14 @@ namespace Job_Offre.Entities
                     .HasColumnName("User_Name");
 
                 entity.Property(e => e.UserPw)
-                    .HasMaxLength(10)
+                    .HasMaxLength(200)
                     .HasColumnName("User_Pw")
                     .IsFixedLength();
 
                 entity.HasOne(d => d.RoleCodeNavigation)
                     .WithMany(p => p.TmUsrUserAccounts)
                     .HasForeignKey(d => d.RoleCode)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_USR_User_Account");
             });
 

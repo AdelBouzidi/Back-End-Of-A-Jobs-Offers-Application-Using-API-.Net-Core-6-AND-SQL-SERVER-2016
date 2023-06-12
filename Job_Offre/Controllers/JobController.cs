@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using Job_Offre.Entities;
-using Job_Offre.JobRepository;
 using Job_Offre.Models;
+using Job_Offre.Repositories;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
@@ -14,10 +14,10 @@ namespace Job_Offre.Controllers
     public class JobController : ControllerBase
     {
         private readonly ILogger<JobController> _logger;
-        private readonly I_JobRepository _jobRepository;
+        private readonly IJobRepository _jobRepository;
         private readonly IMapper _mapper;
 
-        public JobController(ILogger<JobController> Logger, I_JobRepository JobRepository, IMapper mapper)
+        public JobController(ILogger<JobController> Logger, IJobRepository JobRepository, IMapper mapper)
         {
             _logger = Logger ?? throw new ArgumentNullException(nameof(Logger));
             _jobRepository = JobRepository ?? throw new ArgumentNullException(nameof(JobRepository));

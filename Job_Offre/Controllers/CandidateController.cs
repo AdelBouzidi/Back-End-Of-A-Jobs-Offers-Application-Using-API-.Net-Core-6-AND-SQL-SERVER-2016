@@ -1,7 +1,6 @@
 ﻿using AutoMapper;
-using Job_Offre.Entities;
-using Job_Offre.JobRepository;
 using Job_Offre.Models;
+using Job_Offre.Repositories;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -13,19 +12,19 @@ namespace Job_Offre.Controllers
     public class CandidateController : ControllerBase
     {
         private readonly ILogger<CandidateController> _logger;
-        private readonly I_JobRepository _jobRepository;
+        private readonly IUserRepository _userRepository;
         private readonly IMapper _mapper;
 
-        public CandidateController(ILogger<CandidateController> Logger, I_JobRepository JobRepository, IMapper mapper)
+        public CandidateController(ILogger<CandidateController> Logger, IUserRepository UserRepository, IMapper mapper)
         {
             _logger = Logger ?? throw new ArgumentNullException(nameof(Logger));
-            _jobRepository = JobRepository ?? throw new ArgumentNullException(nameof(JobRepository));
+            _userRepository = UserRepository;
             _mapper = mapper ?? throw new ArgumentNullException(nameof(mapper));
         }
         [HttpGet()]
-        public async Task<ActionResult<IEnumerable<CandidateDto>>> GetJob()
+        public async Task<ActionResult<IEnumerable<CandidateDto>>> GetCandidate()
         {
-            var cnd = await _jobRepository.GetCandidatesAsync();
+            var cnd = await _userRepository.GetCandidatesAsync();
             return Ok(_mapper.Map<IEnumerable<CandidateDto>>(cnd));
         }
     }

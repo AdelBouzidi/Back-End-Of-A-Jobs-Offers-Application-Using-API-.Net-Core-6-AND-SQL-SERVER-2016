@@ -1,6 +1,6 @@
 using AutoMapper;
 using Job_Offre.Entities;
-using Job_Offre.JobRepository;
+using Job_Offre.Repositories;
 using Microsoft.IdentityModel.Tokens;
 using Serilog;
 using System.Text;
@@ -26,10 +26,13 @@ builder.Services.AddControllers(
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddTransient<I_JobRepository, JobRepository>();
+builder.Services.AddTransient<IJobRepository, JobRepository>();
+builder.Services.AddTransient<IUserRepository, UserRepository>();
 
 builder.Services.AddDbContext<offres_JobContext>();
+
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("CorePolicy", builder =>

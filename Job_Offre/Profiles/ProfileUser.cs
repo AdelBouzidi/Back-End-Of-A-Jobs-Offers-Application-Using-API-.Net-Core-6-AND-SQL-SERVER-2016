@@ -1,4 +1,6 @@
 ﻿using AutoMapper;
+using Job_Offre.Entities;
+using Job_Offre.Models.Dtos.UserDtos;
 
 namespace Job_Offre.Profiles
 {
@@ -6,7 +8,10 @@ namespace Job_Offre.Profiles
     {
         public ProfileUser()
         {
-            CreateMap<Entities.TmUsrUserAccount, Models.userDto>();
+            CreateMap<TmUsrUserAccount, UserReadDto>();
+            CreateMap<UserCreateDto, TmUsrUserAccount>();
+            //CreateMap<UserReadDto, TmUsrUserAccount>();
+
         }
     }
 }

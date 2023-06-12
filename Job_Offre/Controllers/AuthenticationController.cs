@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using Job_Offre.Entities;
-using Job_Offre.JobRepository;
-using Job_Offre.Models;
+using Job_Offre.Models.Dtos.UserDtos;
+using Job_Offre.Repositories;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
@@ -22,15 +22,16 @@ namespace Job_Offre.Controllers
             public string? Password { get; set; }
             public string? Role { get; set; }
         }
+
+        private readonly IUserRepository _userRepository;
         private readonly IMapper _mapper;
         private readonly IConfiguration _configuration;
-        private readonly I_JobRepository _jobRepository;
 
-        public AuthenticationController(I_JobRepository JobRepository, IMapper mapper, IConfiguration configuration)
+        public AuthenticationController(IUserRepository UserRepository, IMapper mapper, IConfiguration configuration)
         {
+            _userRepository = UserRepository;
             _mapper = mapper ?? throw new ArgumentNullException(nameof(mapper));
             _configuration = configuration;
-            _jobRepository = JobRepository ?? throw new ArgumentNullException(nameof(JobRepository));
         }
         [HttpPost("authenticate")]
         public async Task<ActionResult<string>> Authenticate(AuthenticationRequestBody authenticationRequestBody)
@@ -73,11 +74,11 @@ namespace Job_Offre.Controllers
 
         }
 
-        private async Task<userDto> validateUserCredentials(string? email, string? password, string? role)
+        private async Task<UserReadDto> validateUserCredentials(string? email, string? password, string? role)
         {
-            var userDTO = new userDto();
+            var userDTO = new UserReadDto();
             int passwordLength = password!.Length;
-            var usr = await _jobRepository.GetUserByEmail(email!, role!);
+            var usr = await _userRepository.GetUserByEmail(email!, role!);
 
             userDTO.UserPw = usr.UserPw;
             userDTO.UserName = usr.UserName;
@@ -98,30 +99,7 @@ namespace Job_Offre.Controllers
          
         }
 
-        //private async Task<userDto> validateUserCredentials(string? email, string? password, string? role)
-        //{
-        //    var userDTO = new userDto();
 
-        //    var p = Encoding.ASCII.GetBytes(password!);
-
-        //    if(email == null) {
-        //        throw new Exception("enter an email");
-        //    }
-        //    var usr = await _jobRepository.GetRecruiterByEmail(email!);
-        //    if (p.Equals(usr.UserPw))
-        //    {
-        //        userDTO.UserPw = usr.UserPw;
-        //        userDTO.UserName = usr.UserName;
-        //        userDTO.UserCode = usr.UserCode;
-        //        userDTO.RoleCode = usr.RoleCode;
-        //        return userDTO;
-        //    }
-        //    else
-        //    {
-        //        throw new Exception("mot de passe incorrecte");
-        //    }
-
-        //}
     }   
 }
 
