@@ -1,6 +1,7 @@
 using AutoMapper;
 using Job_Offre.Entities;
-using Job_Offre.JobRepository;
+using Job_Offre.Reduces;
+using Job_Offre.Repositories;
 using Microsoft.IdentityModel.Tokens;
 using Serilog;
 using System.Text;
@@ -27,6 +28,10 @@ builder.Services.AddControllers(
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddTransient<IJobRepository, JobRepository>();
+builder.Services.AddTransient<IUserRepository, UserRepository>();
+builder.Services.AddTransient<ICandidateProfileRepository, CandidateProfileRepository>();
+builder.Services.AddTransient<IUserReduce, UserReduce>();
+
 
 builder.Services.AddDbContext<offres_JobContext>();
 

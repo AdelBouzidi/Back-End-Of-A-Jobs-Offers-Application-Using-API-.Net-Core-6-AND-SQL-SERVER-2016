@@ -1,0 +1,605 @@
+{
+	"info": {
+		"_postman_id": "33abb5c0-4919-4b57-bafc-a416430e7d8d",
+		"name": "Offer Job",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17377465"
+	},
+	"item": [
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "authenticate",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Email\" : \"recruiter.04@gmail.com\",\r\n    \"Password\" : \"OFUser4\",\r\n    \"Role\" : \"recruiter\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7101/api/authentiation/authenticate",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7101",
+							"path": [
+								"api",
+								"authentiation",
+								"authenticate"
+							]
+						},
+						"description": "Authentication\r\n"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Profile",
+			"item": [
+				{
+					"name": "CreatePreference",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"DesiredSalary\" : 18000, \r\n    \"PrefMobility\" : \"national\",\r\n    \"CtrName\" : \"CTT\",\r\n    \"CandidateCode\" : \"3\",\r\n    \"DomainName\" : \"Dev_FE\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7101/api/profile/CreatePreference",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7101",
+							"path": [
+								"api",
+								"profile",
+								"CreatePreference"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllRegions",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7101/api/profile/GetAllRegions?countryName=Algeria",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7101",
+							"path": [
+								"api",
+								"profile",
+								"GetAllRegions"
+							],
+							"query": [
+								{
+									"key": "countryName",
+									"value": "Algeria"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateSkill",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"SkillName\" : \"Sql Express 2016\",\r\n    \"SkillDesc\" : \"SQLite est un de base de données ou une bibliothèque proposant un moteur de base de données relationnelles\",\r\n    \"CandidateCode\" : \"3\",\r\n    \"SkillLevel\" : \"middle\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7101/api/profile/CreateSkill",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7101",
+							"path": [
+								"api",
+								"profile",
+								"CreateSkill"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateFormation",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"FormGrad\" : \"licence\",\r\n    \"FormName\" : \"formation 25\",\r\n    \"FormDesc\" : \"description - formation 25 -\",\r\n    \"SchoolName\" : \"school 25\",\r\n    \"FormInProg\" : 1,\r\n    \"FormSdate\" : \"2019-01-01\",\r\n    \"FormEdate\" : \"2020-01-01\",\r\n    \"CandidateCode\" : \"2\",\r\n    \"CountryName\" : \"Algeria\",\r\n    \"RegionName\" : \"Bouira\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7101/api/profile/CreateFormation",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7101",
+							"path": [
+								"api",
+								"profile",
+								"CreateFormation"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateExperience",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ExpName\" : \"Dévloppeur postgress\",\r\n    \"ExpDesc\" : \"Dévloppeur postgress in facebook\",\r\n    \"ExpCompany\" : \"LDJF\",\r\n    \"ExpInProg\" : 0,\r\n    \"ExpSdate\" : \"2014-01-01\",\r\n    \"ExpEdate\" : \"2016-01-01\",\r\n    \"CandidateCode\" : \"3\",\r\n    \"SkillName\" : \"Postgresql\",\r\n    \"DomainName\" : \"Dev_FE\",\r\n    \"CountryName\" : \"Algeria\",\r\n    \"RegionName\" : \"Bouira\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7101/api/profile/CreateExperience",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7101",
+							"path": [
+								"api",
+								"profile",
+								"CreateExperience"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetProfileByMail",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7101/api/profile/GetProfileByMail?mail=candidate.05@gmail.com",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7101",
+							"path": [
+								"api",
+								"profile",
+								"GetProfileByMail"
+							],
+							"query": [
+								{
+									"key": "mail",
+									"value": "candidate.05@gmail.com"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Apply",
+			"item": [
+				{
+					"name": "Apply",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"JobCode\" : \"27\",\r\n    \"CandidateCode\" : \"2\",\r\n    \"ApplyDate\" : \"2023-02-09\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7101/api/profile/Apply",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7101",
+							"path": [
+								"api",
+								"profile",
+								"Apply"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Job",
+			"item": [
+				{
+					"name": "GetJobByRecruiterCode",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7101/api/Job/GetJobByRecruiterCode?recruiterCode=28",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7101",
+							"path": [
+								"api",
+								"Job",
+								"GetJobByRecruiterCode"
+							],
+							"query": [
+								{
+									"key": "recruiterCode",
+									"value": "28"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateJob",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"JobName\" : \"Job X\", \r\n    \"JobDesc\" : \"Rattaché(e) au responsable du Service Développement Interne, vous intégrerez  une équipe dynamique et passionnée\", \r\n    \"JobLevel\" : \"Team leader\", \r\n    \"JobExpDate\" : \"2019-01-01\", \r\n    \"JobMode\" : \"part-time\", \r\n    \"DomainCode\" : \"9\", \r\n    \"RegionName\" : \"Béchar\", \r\n    \"RecruiterCode\" : \"28\", \r\n    \"CtrCode\" : \"1\", \r\n    \"NumberOfPosts\" : \"6\", \r\n    \"YearExperienceRequired\" : \"3\",\r\n    \"FrenchLevel\" : \"over-middle\",\r\n    \"EnglishLevel\" : \"over-middle\",\r\n    \"Graduate\" : \"Master 2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7101/api/Job/CreateJob",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7101",
+							"path": [
+								"api",
+								"Job",
+								"CreateJob"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetJob",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6IlVzZXIgNSIsInVzZXJDb2RlIjoiNSIsInJvbGVDb2RlIjoiMSIsIm5iZiI6MTY4NTkwNjg5MCwiZXhwIjoxNjg1OTEwNDkwLCJpc3MiOiJodHRwczovL2xvY2FsaG9zdDo3MTAxIiwiYXVkIjoiam9iX29mZnJlYXBpIn0.dX9bKuuCPdlDE6uMXdSDDUS9IIvr8Rbi-F6jKatHNTw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7101/api/Job/GetJob",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7101",
+							"path": [
+								"api",
+								"Job",
+								"GetJob"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Recruiter",
+			"item": [
+				{
+					"name": "GetRecruiterByEmail",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7101/api/Recruiter/bouzidi.adel.95@gmail.com",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7101",
+							"path": [
+								"api",
+								"Recruiter",
+								"bouzidi.adel.95@gmail.com"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Candidate",
+			"item": [
+				{
+					"name": "GetCandidateByMail",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7101/api/candidate/GetCandidateByMail?mail=candidate.01@gmail.com",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7101",
+							"path": [
+								"api",
+								"candidate",
+								"GetCandidateByMail"
+							],
+							"query": [
+								{
+									"key": "mail",
+									"value": "candidate.01@gmail.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateCandidate",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6IlVzZXIgNCIsInVzZXJDb2RlIjoiNCIsInJvbGVDb2RlIjoiMSIsIm5iZiI6MTY4NjUwNTE5MywiZXhwIjoxNjg2NTA4NzkzLCJpc3MiOiJodHRwczovL2xvY2FsaG9zdDo3MTAxIiwiYXVkIjoiam9iX29mZnJlYXBpIn0.-VXU42JmYKWyiIqK9FHHRYsXG_AC3SFH4jnQIUGVkYo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"CandidateFname\" : \"first name cnd-12\",\r\n    \"CandidateLname\" : \"last name cnd-12\",\r\n    \"CandidateAdress\" : \"candidate.adel.13@gmail.com\",\r\n    \"UserPw\" : \"amivdcdecz\",\r\n    \"CandidatePhone\" : \"0723358922\",\r\n    \"CandidateMs\" : 1,\r\n    \"CandidateDesc\" : \"description cnd-12\",\r\n    \"GenderCode\" : \"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7101/api/candidate/CreateCandidate",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7101",
+							"path": [
+								"api",
+								"candidate",
+								"CreateCandidate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetExpByMailTest",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7101/api/candidate/GetExpByMailTest?mail=candidate.02@gmail.com",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7101",
+							"path": [
+								"api",
+								"candidate",
+								"GetExpByMailTest"
+							],
+							"query": [
+								{
+									"key": "mail",
+									"value": "candidate.02@gmail.com"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "CreateUser",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6IlVzZXIgNCIsInVzZXJDb2RlIjoiNCIsInJvbGVDb2RlIjoiMSIsIm5iZiI6MTY4NjMxMDM2MCwiZXhwIjoxNjg2MzEzOTYwLCJpc3MiOiJodHRwczovL2xvY2FsaG9zdDo3MTAxIiwiYXVkIjoiam9iX29mZnJlYXBpIn0.1EOrSR6beY7lVPP-uelbCU8Q3v5vxRTA6BwFuC2PreU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7101/api/User/CreateUser?userPw=abcdabcdabsdsdcd&roleCode=2",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7101",
+							"path": [
+								"api",
+								"User",
+								"CreateUser"
+							],
+							"query": [
+								{
+									"key": "userPw",
+									"value": "abcdabcdabsdsdcd"
+								},
+								{
+									"key": "roleCode",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetUserByCode",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6IlVzZXIgNCIsInVzZXJDb2RlIjoiNCIsInJvbGVDb2RlIjoiMSIsIm5iZiI6MTY4NjEzNjgyOSwiZXhwIjoxNjg2MTQwNDI5LCJpc3MiOiJodHRwczovL2xvY2FsaG9zdDo3MTAxIiwiYXVkIjoiam9iX29mZnJlYXBpIn0.lEfZD0aZwCdtLEesfxONRi94yKlQ1Pq6is5NpASzqkw\"",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7101/api/User/GetUserByCode/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7101",
+							"path": [
+								"api",
+								"User",
+								"GetUserByCode",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateRecruiter",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6IlVzZXIgNCIsInVzZXJDb2RlIjoiNCIsInJvbGVDb2RlIjoiMSIsIm5iZiI6MTY4NjMxMDM2MCwiZXhwIjoxNjg2MzEzOTYwLCJpc3MiOiJodHRwczovL2xvY2FsaG9zdDo3MTAxIiwiYXVkIjoiam9iX29mZnJlYXBpIn0.1EOrSR6beY7lVPP-uelbCU8Q3v5vxRTA6BwFuC2PreU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"RecruiterFname\" : \"first name rec-13\",\r\n    \"RecruiterLname\" : \"last name rec-13\",\r\n    \"RecruiterAdress\" : \"recruiter.islam.99@gmail.com\",\r\n    \"UserPw\" : \"amizecszecz\",\r\n    \"RecruiterPhone\" : \"0789158922\",\r\n    \"RecruiterDesc\" : \"decription rec-13\",\r\n    \"GenderCode\" : \"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7101/api/User/CreateRecruiter",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7101",
+							"path": [
+								"api",
+								"User",
+								"CreateRecruiter"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

@@ -5,11 +5,13 @@ namespace Job_Offre.Entities
 {
     public partial class TmJobJob
     {
+
         public TmJobJob()
         {
             TrAppApplies = new HashSet<TrAppApply>();
             SkillCodes = new HashSet<TmSklSkill>();
         }
+
 
         public int JobCode { get; set; }
         public string JobName { get; set; } = null!;

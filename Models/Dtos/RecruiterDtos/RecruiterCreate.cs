@@ -24,6 +24,7 @@ namespace Job_Offre.Models.Dtos.RecruiterDtos
         public string RecruiterPhone { get; set; } = null!;
 
         [Required]
+        [MaxLength(200)]
         public string? RecruiterDesc { get; set; }
 
         [Required]

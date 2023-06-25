@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using Job_Offre.Entities;
-using Job_Offre.JobRepository;
 using Job_Offre.Models.Dtos.UserDtos;
+using Job_Offre.Repositories;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
@@ -22,15 +22,16 @@ namespace Job_Offre.Controllers
             public string? Password { get; set; }
             public string? Role { get; set; }
         }
+
+        private readonly IUserRepository _userRepository;
         private readonly IMapper _mapper;
         private readonly IConfiguration _configuration;
-        private readonly IJobRepository _jobRepository;
 
-        public AuthenticationController(IJobRepository JobRepository, IMapper mapper, IConfiguration configuration)
+        public AuthenticationController(IUserRepository UserRepository, IMapper mapper, IConfiguration configuration)
         {
+            _userRepository = UserRepository;
             _mapper = mapper ?? throw new ArgumentNullException(nameof(mapper));
             _configuration = configuration;
-            _jobRepository = JobRepository ?? throw new ArgumentNullException(nameof(JobRepository));
         }
         [HttpPost("authenticate")]
         public async Task<ActionResult<string>> Authenticate(AuthenticationRequestBody authenticationRequestBody)
@@ -77,7 +78,7 @@ namespace Job_Offre.Controllers
         {
             var userDTO = new UserReadDto();
             int passwordLength = password!.Length;
-            var usr = await _jobRepository.GetUserByEmail(email!, role!);
+            var usr = await _userRepository.GetUserByEmail(email!, role!);
 
             userDTO.UserPw = usr.UserPw;
             userDTO.UserName = usr.UserName;

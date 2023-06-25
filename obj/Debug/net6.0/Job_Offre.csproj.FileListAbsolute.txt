@@ -83,3 +83,4 @@ D:\ASP\Etudiant\Job_Offre\Job_Offre\obj\Debug\net6.0\refint\Job_Offre.dll
 D:\ASP\Etudiant\Job_Offre\Job_Offre\obj\Debug\net6.0\Job_Offre.pdb
 D:\ASP\Etudiant\Job_Offre\Job_Offre\obj\Debug\net6.0\Job_Offre.genruntimeconfig.cache
 D:\ASP\Etudiant\Job_Offre\Job_Offre\obj\Debug\net6.0\ref\Job_Offre.dll
+D:\ASP\Etudiant\Job_Offre\Job_Offre\bin\Debug\net6.0\Offer Job.postman_collection.json
