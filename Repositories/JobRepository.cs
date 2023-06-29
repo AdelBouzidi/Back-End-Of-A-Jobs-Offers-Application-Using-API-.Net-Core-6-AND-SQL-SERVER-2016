@@ -200,7 +200,7 @@ namespace Job_Offre.Repositories
         //    return await _context.TmJobJobs.Where(j => j.RecruiterCode == recCode).ToListAsync();
         //}
 
-        public async Task<IEnumerable<JobDtoCreateTransformed2>> GetJobByRecruiterCode(int recCode)
+        public async Task<IEnumerable<JobDtoCreateTransformed3>> GetJobByRecruiterCode(int recCode)
         {
             var job = from j in _context.TmJobJobs
                       join d in _context.TmDmnDomains
@@ -210,8 +210,9 @@ namespace Job_Offre.Repositories
                       join tc in _context.TcCtrTypeContracts
                       on j.CtrCode equals tc.CtrCode
                       where j.RecruiterCode == recCode
-                      select new JobDtoCreateTransformed2
+                      select new JobDtoCreateTransformed3
                       {
+                          JobCode= j.JobCode,
                           JobName = j.JobName,
                           JobDesc = j.JobDesc,
                           JobLevel = j.JobLevel,

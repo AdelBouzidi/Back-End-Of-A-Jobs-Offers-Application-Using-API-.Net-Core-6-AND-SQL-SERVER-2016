@@ -107,7 +107,3 @@ namespace Job_Offre.Controllers
 
 
 
-//Le gestionnaire de paquets NuGet met à disposition plusieurs paquets vous permettant de générer votre propre jeton. 
-//    Microsoft a mis en ligne le sien : "System.IdentityModel.Tokens.Jwt".Dans ce paquet, on retrouve la classe 
-//    "SymmetricKey" qui permet de générer des clés sécurisées à partir d'un encodage. Le standard JWT en accepte plusieurs, 
-//    notamment HMACSHA256.

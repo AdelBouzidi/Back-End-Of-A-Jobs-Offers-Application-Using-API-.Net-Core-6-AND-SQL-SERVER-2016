@@ -1,6 +1,8 @@
 ﻿using Job_Offre.Entities;
 using Job_Offre.Models.Dtos.ExperienceDtos;
 using Job_Offre.Models.Dtos.FormationDtos;
+using Job_Offre.Models.Dtos.JobCandidateDtos;
+using Job_Offre.Models.Dtos.JobDtos;
 using Job_Offre.Models.Dtos.PreferenceDtos;
 using Job_Offre.Models.Dtos.SkillDtos;
 
@@ -48,6 +50,8 @@ namespace Job_Offre.Repositories
         Task AddApplyAsync(TrAppApply app);
         Task<bool> ApplyExist(TrAppApply app);
         Task<TrAppApply> getApplyAsync(TrAppApply app);
+        Task<IEnumerable<JobCandidatesReadDto>> getJobsAndCandidatesApplyByRecCode(int recruiterCode);
+        Task<IEnumerable<MyJobApplication>> GetMyJobApplicationByCandidateAdress(string mail);
         Task<bool> SaveChangesAsync();
     }
 }

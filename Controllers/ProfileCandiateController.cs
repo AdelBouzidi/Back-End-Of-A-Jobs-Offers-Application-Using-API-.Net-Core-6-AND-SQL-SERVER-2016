@@ -5,6 +5,7 @@ using Job_Offre.Models.Dtos.ApplyDtos;
 using Job_Offre.Models.Dtos.CandidateDtos;
 using Job_Offre.Models.Dtos.ExperienceDtos;
 using Job_Offre.Models.Dtos.FormationDtos;
+using Job_Offre.Models.Dtos.JobDtos;
 using Job_Offre.Models.Dtos.PreferenceDtos;
 using Job_Offre.Models.Dtos.ProfileDto;
 using Job_Offre.Models.Dtos.SkillDtos;
@@ -16,7 +17,7 @@ using System.Reflection.Emit;
 namespace Job_Offre.Controllers
 {
     [ApiController]
-    [Authorize]
+    //[Authorize]
     [Route("api/profile")]
     public class ProfileCandiateController : ControllerBase
     {
@@ -168,25 +169,6 @@ namespace Job_Offre.Controllers
 
             return Ok(exp);//code 200
         }
-        //private async Task<ExperienceDtoTransformed3> GetExpTransformedByExpCode(int CodeExp)
-        //{
-        //    var exp = await _candidateProfileRepository.GetExpByCodeExp(CodeExp);
-        //    var have_exp = await _candidateProfileRepository.GetHaveExpByCodeExp(CodeExp);
-        //    var expTransformed = new ExperienceDtoTransformed3();
-        //    expTransformed.ExpCode = exp.ExpCode;
-        //    expTransformed.ExpName = exp.ExpName;
-        //    expTransformed.ExpDesc = exp.ExpDesc;
-        //    expTransformed.ExpCompany = exp.ExpCompany;
-        //    expTransformed.ExpInProg = exp.ExpInProg;
-        //    expTransformed.ExpSdate = exp.ExpSdate;
-        //    expTransformed.ExpEdate = exp.ExpEdate;
-        //    expTransformed.CandidateCode = have_exp.CandidateCode;
-        //    expTransformed.SkillCode = have_exp.SkillCode;
-        //    expTransformed.DomainCode = have_exp.DomainCode;
-        //    expTransformed.CountryCode = have_exp.CountryCode;
-        //    expTransformed.RegionCode = have_exp.RegionCode;
-        //    return expTransformed;//code 200
-        //}
         private async Task<TmExpExperience> CreateExperienceTable( ExperienceReadDto exp)
         {
             try
@@ -545,6 +527,20 @@ namespace Job_Offre.Controllers
                 Console.WriteLine($"Exception occurred /////////////////////////////////// : {ex.Message}");
             }
             throw new Exception();
+        }
+
+
+        [HttpGet()]
+        [Route("MyJobsApply")]
+        public async Task<ActionResult<IEnumerable<MyJobApplication>>> GetMyApplications(string Email)
+        {
+            var jobs = await _candidateProfileRepository.GetMyJobApplicationByCandidateAdress(Email);
+            if (jobs == null)
+            {
+                return NotFound(); // 404
+            }
+
+            return Ok(jobs);//code 200
         }
 
 

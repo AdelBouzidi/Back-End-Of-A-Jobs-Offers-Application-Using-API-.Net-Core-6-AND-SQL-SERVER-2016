@@ -1,9 +1,11 @@
-﻿namespace Job_Offre.Models.Dtos.JobCandidateDtos
+﻿using Job_Offre.Models.Dtos.JobDtos;
+
+namespace Job_Offre.Models.Dtos.JobCandidateDtos
 {
     public class JobCandidatesReadDto
     {
-        public JobDto? Job { get; set; }
-        public IEnumerable<CandidateDto>? Candidates { get; set; }
+        public JobDtoCreateTransformed3? Job { get; set; }
+        public IEnumerable<CandidateDto> Candidates { get; set; }
 
     }
 }

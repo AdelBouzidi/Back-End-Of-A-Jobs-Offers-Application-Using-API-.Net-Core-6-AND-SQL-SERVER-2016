@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Job_Offre.Entities;
 using Job_Offre.Models;
+using Job_Offre.Models.Dtos.JobCandidateDtos;
 using Job_Offre.Models.Dtos.JobDtos;
 using Job_Offre.Repositories;
 using Microsoft.AspNetCore.Authorization;
@@ -114,7 +115,7 @@ namespace Job_Offre.Controllers
 
         [HttpGet()]
         [Route("GetJobByRecruiterCode")]
-        public async Task<ActionResult<JobDtoCreateTransformed2>> GetJobByRecruiterCode(int recruiterCode)
+        public async Task<ActionResult<JobDtoCreateTransformed3>> GetJobByRecruiterCode(int recruiterCode)
         {
             var job = await _jobRepository.GetJobByRecruiterCode(recruiterCode);
            
@@ -125,5 +126,21 @@ namespace Job_Offre.Controllers
 
             return Ok(job);//code 200
         }
+
+
+        [HttpGet()]
+        [Route("GetJobAndCandidatesByRecruiterCode")]
+        public async Task<ActionResult<IEnumerable<JobCandidatesReadDto>>> GetJobAndCandidatesByRecruiterCode(int recruiterCode)
+        {
+            var job = await _candidateProfileRepository.getJobsAndCandidatesApplyByRecCode(recruiterCode);
+
+            if (job == null)
+            {
+                return NotFound(); // 404
+            }
+
+            return Ok(job);//code 200
+        }
+
     }
 }

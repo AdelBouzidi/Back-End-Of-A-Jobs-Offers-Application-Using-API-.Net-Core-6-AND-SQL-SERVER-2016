@@ -1,11 +1,14 @@
 ﻿using Job_Offre.Entities;
+using Job_Offre.Models;
 using Job_Offre.Models.Dtos.ExperienceDtos;
 using Job_Offre.Models.Dtos.FormationDtos;
 using Job_Offre.Models.Dtos.JobCandidateDtos;
+using Job_Offre.Models.Dtos.JobDtos;
 using Job_Offre.Models.Dtos.PreferenceDtos;
 using Job_Offre.Models.Dtos.ProfileDto;
 using Job_Offre.Models.Dtos.SkillDtos;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 using System.Reflection.Emit;
 
 namespace Job_Offre.Repositories
@@ -311,18 +314,102 @@ namespace Job_Offre.Repositories
             return await _context.TrAppApplies.Where(a => a.CandidateCode == app.CandidateCode
             && a.JobCode == app.JobCode && a.ApplyDate == app.ApplyDate).FirstAsync();
         }
-        //public async Task<JobCandidatesReadDto> getJobsAndCandidatesApplyByRecCode(int recruiterCode)
-        //{
-        //    var jc = from rec in _context.TmRecRecruiters 
-        //             join job in _context.TmJobJobs
-        //             on rec.RecruiterCode equals job.RecruiterCode
-        //             join app in _context.TrAppApplies
-        //             on job.JobCode equals app.JobCode
-        //             join cnd in _context.TmCndCandidates
-        //             on app.CandidateCode equals cnd.CandidateCode
-        //             where rec.RecruiterCode == recruiterCode
-        //             select new JobCandidatesReadDto
-        //}
+        public async Task<IEnumerable<MyJobApplication>> GetMyJobApplicationByCandidateAdress(string mail)
+        {
+            var jobs = from cnd in _context.TmCndCandidates
+                       join app in _context.TrAppApplies
+                       on cnd.CandidateCode equals app.CandidateCode
+                       join job in _context.TmJobJobs
+                       on app.JobCode equals job.JobCode
+                       join dmn in _context.TmDmnDomains
+                       on job.DomainCode equals dmn.DomainCode
+                       join reg in _context.TmRegRegions
+                       on job.RegionCode equals reg.RegionCode
+                       join ctr in _context.TcCtrTypeContracts
+                       on job.CtrCode equals ctr.CtrCode
+                       join rec in _context.TmRecRecruiters
+                       on job.RecruiterCode equals rec.RecruiterCode
+                       where cnd.CandidateAdress == mail
+                       select new MyJobApplication
+                       {
+                           JobCode = job.JobCode,
+                           JobName = job.JobName,
+                           JobDesc = job.JobDesc,
+                           JobLevel = job.JobLevel,
+                           JobExpDate = job.JobExpDate,
+                           JobMode = job.JobMode,
+                           DomainName = dmn.DomainName,
+                           RegionName = reg.RegionName,
+                           RecruiterAdress = rec.RecruiterAdress,
+                           RecruiterFName = rec.RecruiterFname,
+                           RecruiterLName = rec.RecruiterLname,
+                           CtrName = ctr.CtrLabel,
+                           NumberOfPosts = job.NumberOfPosts,
+                           YearExperienceRequired = job.YearExperienceRequired,
+                           FrenchLevel = job.FrenchLevel,
+                           EnglishLevel = job.EnglishLevel,
+                           Graduate = job.Graduate,
+                           ApplyDate = app.ApplyDate
+                       };
+            return await jobs.ToListAsync();
+        }
+
+        public async Task<IEnumerable<JobCandidatesReadDto>> getJobsAndCandidatesApplyByRecCode(int recruiterCode)
+        {
+            var jc = from rec in _context.TmRecRecruiters
+                     join job in _context.TmJobJobs
+                     on rec.RecruiterCode equals job.RecruiterCode
+                     join app in _context.TrAppApplies
+                     on job.JobCode equals app.JobCode
+                     join cnd in _context.TmCndCandidates
+                     on app.CandidateCode equals cnd.CandidateCode
+                     join dmn in _context.TmDmnDomains
+                     on job.DomainCode equals dmn.DomainCode
+                     join reg in _context.TmRegRegions 
+                     on job.RegionCode equals reg.RegionCode
+                     join ctr in _context.TcCtrTypeContracts
+                     on job.CtrCode equals ctr.CtrCode
+                     where rec.RecruiterCode == recruiterCode
+                     select new JobCandidatesReadDto
+                     {
+                         Job = new JobDtoCreateTransformed3
+                         {
+                             JobCode = job.JobCode,
+                             JobName = job.JobName,
+                             JobDesc = job.JobDesc,
+                             JobLevel = job.JobLevel,
+                             JobExpDate = job.JobExpDate,
+                             JobMode = job.JobMode,
+                             DomainName = dmn.DomainName,
+                             RegionName = reg.RegionName,
+                             RecruiterCode = job.RecruiterCode,
+                             CtrName = ctr.CtrLabel,
+                             NumberOfPosts = job.NumberOfPosts,
+                             YearExperienceRequired = job.YearExperienceRequired,
+                             FrenchLevel = job.FrenchLevel,
+                             EnglishLevel = job.EnglishLevel,
+                             Graduate = job.Graduate
+                         },
+                         Candidates = new List<CandidateDto>
+                     {
+                         new CandidateDto
+                         {
+                             CandidateCode = cnd.CandidateCode,
+                             CandidateFname = cnd.CandidateFname,
+                             CandidateLname = cnd.CandidateLname,
+                             CandidateAdress = cnd.CandidateAdress,
+                             CandidatePhone = cnd.CandidatePhone,
+                             CandidateMs = cnd.CandidateMs,
+                             CandidateDesc = cnd.CandidateDesc,
+                             GenderCode = cnd.GenderCode,
+                             UserCode = cnd.UserCode
+                         }
+                     }
+                     };
+            //JobCandidatesReadDto result = jc.ToList();
+
+            return jc.ToList();
+        }
 
         public async Task<bool> SaveChangesAsync()
         {

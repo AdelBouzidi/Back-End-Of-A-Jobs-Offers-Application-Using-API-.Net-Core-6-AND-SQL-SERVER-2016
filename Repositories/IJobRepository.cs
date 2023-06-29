@@ -27,7 +27,7 @@ namespace Job_Offre.Repositories
         Task<IEnumerable<JobDtoTransformed>> GetJobsTransformedAsync();
         Task<TmJobJob> GetJobByALLprop(JobDtoCreate job);
         //Task<IEnumerable<TmJobJob>> GetJobByRecruiterCode(int recCode);
-        Task<IEnumerable<JobDtoCreateTransformed2>> GetJobByRecruiterCode(int recCode);
+        Task<IEnumerable<JobDtoCreateTransformed3>> GetJobByRecruiterCode(int recCode);
         Task<bool> JobExist(JobDtoCreate job);
     }
 }
